@@ -85,34 +85,103 @@ After loading audio with the [loadSound()](https://p5js.org/reference/#/p5.Sound
 ```
 
 ### Vanilla JS audio
-- immediate callback
-- warming up audio with loop
-- create an audio context and start it with a touch event
-  - https://paulbakaus.com/tutorials/html5/web-audio-on-ios/
-  - https://webaudioapi.com/book/Web_Audio_API_Boris_Smus_html/ch01.html#s01_1
-- ogg vorbis
+With Vanilla JS there are 3 three general approaches. Which approach works best will depend on your setup.
+
+1. Use an [immediate callback](#Callback) to play audio
+2. Warm up a list of audio nodes [with a loop](#Loop)
+3. Connect all sound sources to a warm [AudioContext](#AudioContext)
+
+
+#### Callback
+Play the sound in the callback of a user gesture.
+```js
+  var sound = new Audio();
+  sound.src = "https://objects.koji-cdn.com/ae3b585d-6f50-47fc-91c2-fd574e826822/airhornclubsample1.mp3";
+
+  // play an audio node on touchstart
+  document.addEventListener('touchstart', () => {
+
+    sound.play();
+  });
+```
+
+#### Loop
+Loop through a list of sounds to "warm" them up.
+
+html
+```html
+  <button id="start"></button>
+```
+
+js
+```js
+  // a list of audio nodes
+  var sounds = [...listOfAudioNodes];
+
+  function warm(soundList) {
+    // play and immediately pause each sound in the list
+
+    soundList.forEach((sound) => {
+      sound.play();
+      sound.pause();
+    })
+  }
+
+  // warm audio nodes with user gesture
+  var startButton = document.getElementById('start');
+  startButton.addEventListener('click', () => {
+
+    warm(sounds);
+  });
+
+```
+
+#### AudioContext
+Play sounds through a warm AudioContext
+[read more about webaudio here](https://webaudioapi.com/book/Web_Audio_API_Boris_Smus_html/ch01.html#s01_1)
+
+js
+```js
+// create an audio context
+var audioCtx = new AudioContext();
+
+// list of sounds as AudioBuffers
+var audioBuffers = [...listOfAudioBuffers];
+
+// warm audio context with user gesture
+window.addEventListener('touchstart', function() {
+
+	// create empty buffer
+	var buffer = audioCtx.createBuffer(1, 1, 22050);
+	var source = audioCtx.createBufferSource();
+	source.buffer = buffer;
+
+	// connect to output (your speakers)
+	source.connect(audioCtx.destination);
+
+	// play the file
+	source.noteOn(0);
+
+}, false);
+
+// play sound
+function playSound(audioBuffer) {
+  var source = audioCtx.createBufferSource();
+  source.buffer = audioBuffer;
+  source.connect(audioCtx.destination);
+  source.start(0);
+}
+
+// play a sound
+playSound(audioBuffers[0]);
+```
 
 ---
-## notes
-- audio won't play
-    - immediate callback
-    - warming up audio nodes with a loop
-    - create an audio context and start it with a touch event
+## TODO
 - pulldown refresh
 - doesn't support pwa
+- ogg vorbis
 
 --- 
-
-https://medium.com/@myeris/getting-started-with-pwas-an-ios-nightmare-f0712c2f950
-
-https://quirksmode.org/compatibility.html
-
-## 
-https://github.com/rgruesbeck/pong/commit/21b30adabf4240b4193d4131a66e81ef96359f2e#diff-7fe8b474a9819ab093e95b9e35513367L61
-
-// p5 ios audio fix
-https://github.com/processing/p5.js-sound/blob/117a69dc5345fa85c53a633be0b3dbb5b9253a86/src/sndcore.js#L158
-
-http://frontend-9608daf0-76a5-41b1-98a1-f3fdd67576c1.koji-staging.com/
-
-https://cdnjs.com/libraries/p5.js/
+- https://medium.com/@myeris/getting-started-with-pwas-an-ios-nightmare-f0712c2f950
+- https://quirksmode.org/compatibility.html
