@@ -1,12 +1,19 @@
-# iOS issues
+# iOS Issues
 
-## FAQ
-#### [Sounds doesn't work in iOS/Safari](#Audio-workarounds)
-#### [Can't click on element/button in iOS/Safari](#click-event-workaround)
-#### [The bottom bar cuts off the bottom or my app](#100vh-and-windowinnerHeight-problems)
+## Bottom bar cuts off bottom of app
+- [viewport units don't report correct values](#viewport-units-dont-report-correct-values)
+
+## Can't touch/click on item
+- [no touch/click events for elements added after load.](#touch-events-on-added-DOM-nodes)
+- [no touch events in iframe](#touch-events-in-iframe)
+
+## Sounds not working
+- [playing audio requires user gesture.](#Audio-workarounds)
+- [ogg vorbis unsupported](#Ogg-Vorbis).
 
 ---
-## click event workaround
+
+## touch events on added DOM nodes
 iOS won't register a click/touch event to an element added after DOM load. This example should get click events working in Safari and iOS for both static and updated elements. For more information about this quirk checkout https://www.quirksmode.org/blog/archives/2010/10/click_event_del_1.html
 
 ### JSBin 
@@ -54,7 +61,25 @@ css
 ```
 
 ---
-## 100vh and window.innerHeight problems
+## touch events in iframe 
+iOS conditionally denies touch events. Choose either of these workarounds.
+Taken from [here](https://stackoverflow.com/questions/41869122/touch-events-within-iframe-are-not-working-on-ios/50483933#50483933)
+
+
+Add a dummy listener to the document within the iframe.
+```js
+  document.addEventListener('touchstart', {}); // in iframe
+```
+-OR-
+
+Add a dummy listener to the top window
+```js
+  window.addEventListener('touchstart', {}); // in top window
+```
+
+---
+## viewport units don't report correct values
+100vh and window.innerHeight problems
 Both iOS Safari and iOS Chrome do not report the correct viewport height. This bug is known and [currently unresolved](https://bugs.webkit.org/show_bug.cgi?id=141832) but may be revisited.
 
 Checkout the various workarounds and chose one that fit your situation best.
@@ -64,7 +89,7 @@ Checkout the various workarounds and chose one that fit your situation best.
 
 ---
 ## Audio workarounds
-iOS requires a user action to start playing audio. If you are using a framework like [P5](#P5-audio), iOS audio workaround are already baked in (based on warming up an [AudioContext](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext)). Just make sure you are using the official loading methods and bind a user event to some method to get audio started.
+iOS requires a user action to start playing audio. If you are using a framework like [P5](#P5-audio), iOS audio workaround are already baked in. Just make sure you are using the official loading methods and bind a user event to some method to get audio started.
 
 ### P5 audio
 After loading audio with the [loadSound()](https://p5js.org/reference/#/p5.SoundFile/loadSound) method, to [startAudioContext](https://p5js.org/reference/#/p5.sound/getAudioContext) bind some code to start the audio context to a user gesture.
@@ -137,8 +162,9 @@ js
 ```
 
 #### AudioContext
-Play sounds through a warm AudioContext
-[read more about webaudio here](https://webaudioapi.com/book/Web_Audio_API_Boris_Smus_html/ch01.html#s01_1)
+Play sounds through a warm [AudioContext](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext)
+
+Read more about the [Web Audio API](https://webaudioapi.com/book/Web_Audio_API_Boris_Smus_html/ch01.html#s01_1)
 
 js
 ```js
@@ -177,11 +203,9 @@ playSound(audioBuffers[0]);
 ```
 
 ---
-## TODO
-- pulldown refresh
-- doesn't support pwa
-- ogg vorbis
+## Ogg Vorbis
+Ogg Vorbis is [not supported](https://caniuse.com/#feat=ogg-vorbis) on iOS browsers.
 
---- 
+---
+## PWA Support
 - https://medium.com/@myeris/getting-started-with-pwas-an-ios-nightmare-f0712c2f950
-- https://quirksmode.org/compatibility.html
