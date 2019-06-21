@@ -14,12 +14,7 @@
 ---
 
 ## touch events on added DOM nodes
-iOS won't register a click/touch event to an element added after DOM load. This example should get click events working in Safari and iOS for both static and updated elements. For more information about this quirk checkout https://www.quirksmode.org/blog/archives/2010/10/click_event_del_1.html
-
-### JSBin 
-https://jsbin.com/wabudabuqa/1/edit?html,css,js,output
-
-### Example
+iOS won't register a click/touch event to an element added after DOM load. This example should get click events working in Safari and iOS for both static and updated elements. Read more [here](https://www.quirksmode.org/blog/archives/2010/10/click_event_del_1.html).
 
 html
 ```html
@@ -60,6 +55,8 @@ css
   
 ```
 
+[JSBin](https://jsbin.com/wabudabuqa/1/edit?html,css,js,output)
+
 ---
 ## touch events in iframe 
 iOS conditionally denies touch events. Choose either of these workarounds.
@@ -79,13 +76,15 @@ Add a dummy listener to the top window
 
 ---
 ## viewport units don't report correct values
-100vh and window.innerHeight problems
-Both iOS Safari and iOS Chrome do not report the correct viewport height. This bug is known and [currently unresolved](https://bugs.webkit.org/show_bug.cgi?id=141832) but may be revisited.
+iOS browsers do not report the correct viewport height.
+This bug affects `window.innerHeight` and `vh`.
 
 Checkout the various workarounds and chose one that fit your situation best.
-- [lots of media queries](https://medium.com/@susiekim9/how-to-compensate-for-the-ios-viewport-unit-bug-46e78d54af0d)
-- [eventbrite's solution](https://www.eventbrite.com/engineering/mobile-safari-why/)
-- [bugfill package](https://github.com/rodneyrehm/viewport-units-buggyfill)
+1. [lots of media queries](https://medium.com/@susiekim9/how-to-compensate-for-the-ios-viewport-unit-bug-46e78d54af0d)
+2. [eventbrite's solution](https://www.eventbrite.com/engineering/mobile-safari-why/)
+3. [bugfill package](https://github.com/rodneyrehm/viewport-units-buggyfill)
+
+This bug is known and [currently unresolved](https://bugs.webkit.org/show_bug.cgi?id=141832) but may be revisited.
 
 ---
 ## Audio workarounds
@@ -208,4 +207,4 @@ Ogg Vorbis is [not supported](https://caniuse.com/#feat=ogg-vorbis) on iOS brows
 
 ---
 ## PWA Support
-- https://medium.com/@myeris/getting-started-with-pwas-an-ios-nightmare-f0712c2f950
+- [pwa-issue](https://medium.com/@myeris/getting-started-with-pwas-an-ios-nightmare-f0712c2f950)
