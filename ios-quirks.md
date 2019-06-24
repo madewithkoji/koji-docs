@@ -207,4 +207,6 @@ Ogg Vorbis is [not supported](https://caniuse.com/#feat=ogg-vorbis) on iOS brows
 
 ---
 ## PWA Support
-- [pwa-issue](https://medium.com/@myeris/getting-started-with-pwas-an-ios-nightmare-f0712c2f950)
+PWA lifecyles are different on iOS, and there are various bugs and unavailable features. (camera, motion sensors, install API)
+
+Checkout [Maximiliano Firtman's blog](https://medium.com/@firt/whats-new-on-ios-12-2-for-progressive-web-apps-75c348f8e945) on iOS PWA's
