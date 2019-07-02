@@ -36,32 +36,31 @@ For example, we will look at the `strings.json` file which is located at `/.koji
 
 ```json
 {
-	"colors": {
-		"backgroundColor": "#e2e5ec",
-		"textColor": "#131313"
-	},
-	"@@editor": [
-		{
-			"key": "colors",
-			"name": "Colors",
-			"icon": "💅",
-			"source": "colors.json",
-			"fields": [
-				{
-					"key": "textColor",
-					"name": "Text color",
-					"description": "Default color for text",
-					"type": "color"
-				},
-				{
-					"key": "backgroundColor",
-					"name": "Background color",
-					"type": "color"
-				}
-			]
-		}
-	]
-}
+  "colors": {
+    "backgroundColor": "#e2e5ec",
+    "textColor": "#131313"
+  },
+  "@@editor": [
+    {
+      "key": "colors",
+      "name": "Colors",
+      "icon": "💅",
+      "source": "colors.json",
+      "fields": [
+        {
+          "key": "textColor",
+          "name": "Text color",
+          "description": "Default color for text",
+          "type": "color"
+        },
+        {
+          "key": "backgroundColor",
+          "name": "Background color",
+          "type": "color"
+        }
+      ]
+    }
+  ]
 ```
 With the `koji-tools` package up and running, we reference these VCCs using `Koji.config`. For example, printing `textColor` to the screen would look like:
 ```js
