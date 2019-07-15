@@ -90,6 +90,19 @@ This bug is known and [currently unresolved](https://bugs.webkit.org/show_bug.cg
 ## Audio workarounds
 iOS requires a user action to start playing audio. If you are using a framework like [P5](#P5-audio), iOS audio workaround are already baked in. Just make sure you are using the official loading methods and bind a user event to some method to get audio started.
 
+### Use unlock-audio-context module
+using `unlock-audio-context` is an easy way to get audio working.
+```sh
+npm install --save unlock-audio-context
+```
+
+```js
+import unlockAudioContext from 'unlock-audio-context';
+const myAudioCtx = new AudioContext();
+
+unlockAudioContext(myAudioCtx)
+```
+
 ### P5 audio
 After loading audio with the [loadSound()](https://p5js.org/reference/#/p5.SoundFile/loadSound) method, to [startAudioContext](https://p5js.org/reference/#/p5.sound/getAudioContext) bind some code to start the audio context to a user gesture.
 
@@ -210,3 +223,10 @@ Ogg Vorbis is [not supported](https://caniuse.com/#feat=ogg-vorbis) on iOS brows
 PWA lifecyles are different on iOS, and there are various bugs and unavailable features. (camera, motion sensors, install API)
 
 Checkout [Maximiliano Firtman's blog](https://medium.com/@firt/whats-new-on-ios-12-2-for-progressive-web-apps-75c348f8e945) on iOS PWA's
+
+---
+## Resources
+- https://bugs.webkit.org/
+- https://developer.apple.com/develop/
+- https://forums.developer.apple.com/welcome
+- https://support.apple.com/en-us/HT203794
