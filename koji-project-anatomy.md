@@ -1,37 +1,62 @@
 # Anatomy of a Koji Project
-This is a list of where every file that is important to Koji lives and a description of what those files do. This is the recommended structure for Koji projects, deviations from this file organization are fine, but they should have a good reason.
-
-**The only truly required files for Koji to work are in the first two sections, `README.md`, `develop.json`, and `deploy.json`.**
- After those files this document just describes best practices and what to expect in the Scaffolds and Templates that currently exist in Koji.
+## Environment
+Koji provides you with a environment for developing and publishing an app in your browser. This includes a terminal connected to a running container with all the familiar tools, the same code editor that powers VSCode, and tools to help you deploy and publish your app to [withkoji.com](https://withkoji.com/).
  
-## ./README.md
-This file is in your root directory and renders a markdown file for the *Overview* tab in the *Project* section on the left hand side.
+---
+ ## Project Directory
+ The project directory at `/usr/src/app` contains your contains a git repository for your project with two remotes. An upstream remote for template projects your projects is starting with, and an origin remote that deployed versions are build from. Run `git config -l` to see the remotes in your project.
 
-## The *.koji* directory
+---
+## README
+The `README.md` file is in your project directory and renders a markdown file for the **Overview** tab in the **Project** section on the left hand side.
 
-This is where all of your configuration files live. There are a number of sub-directories here, each one controls a different part of Koji. 
-### .koji/project
-The `.json` files in this directory each have a very specific schema that controls how the Koji editor deals with files. `develop.json` deals with setting up your editor so you will have the best editing experience and `deploy.json` tells Koji how to turn your code into a live app. These files have the following schema:
-#### .koji/project/develop.json
+---
+## Koji Directory
+
+The `.koji` directory is where your configuration and script files live. The including [project configuration](#kojiproject) for development and deploy, [scripts](#kojihooks), and [customizations](#kojicustomization) for visual customization controls (vccs).
+
+```sh
+.
+├── customization
+│   ├── about_customization.md
+│   ├── buttons.json
+│   ├── colors.json
+│   ├── images.json
+│   ├── metadata.json
+│   ├── settings.json
+│   └── sounds.json
+├── hooks
+│   ├── about_hooks.md
+│   └── post-clone.sh
+├── project
+│   ├── about_project.md
+│   ├── deploy.json
+│   └── develop.json
+└── scripts
+    ├── buildConfig.js
+    └── buildManifest.js
+```
+⚠️ **The only required files for Koji to work are:**
+- `README.md` displays project information in the project overview
+- `develop.json` lets editor how your project development works (project path, port, start command, and events)
+- `deploy.json` lets deploy know where your project build works (build path, port, build commands)
+
+### **develop.json**
+`.koji/project/develop.json` contains development configuration for your project.
+
 ```json
 {
-  "develop":  {
-    "frontend":  {
-      "path":  "frontend",
-      "port":  8080,
-      "events":  {
-        "built":  "Compiled successfully.",
+  "develop": {
+    "frontend": {
+      "path": "frontend",
+      "port": 8080,
+      "events": {
+        "started": "[webpack] Frontend server started",
+        "building": "[webpack] Frontend building",
+        "built": "Compiled successfully.",
+        "build-error": "[webpack] Frontend build error"
       },
-      "startCommand":  "npm start"
-    },
-    "backend":  {
-      "path":  "backend",
-      "port":  3333,
-      "startCommand":  "npm start",
-      "events":  {
-        "started":  "[koji] backend started",
-        "log":  "[koji-log]"
-      }
+      "startCommand": "npm start"
     }
   }
 }
@@ -42,7 +67,8 @@ In this file the important things to look at are:
 3. the `"startCommand"` for your app is placed in the start script of your `package.json` (for npm start to work)
 4. Your development server prints out the string in `"built"` when your files are ready to be displayed.
 
-#### .koji/project/deploy.json
+### **deploy.json**
+`.koji/project/deploy.json` contains deploy configuration for your project.
 ```json
 {
   "deploy":  {
@@ -70,9 +96,13 @@ In `deploy.json` make sure to check that:
 1. your `"output"` goes to the directory where your files will be compiled into after the `"commands"` list is done.
 2. `"commands"` is the complete list of steps in order to build your project into pages that can be served statically.
 
+
+The `.json` files in this directory each have a very specific schema that controls how the Koji editor deals with files. `develop.json` deals with setting up your editor so you will have the best editing experience and `deploy.json` tells Koji how to turn your code into a live app. These files have the following schema:
+
+
 ### .koji/customization
-Every `.json` file in this directory is created by the template creator and creates a tab in the *Customization* section in the navigation bar on the left side of the screen. 
-The following would create a section called *Example* and would be in a file called `example.json`:
+Every `.json` file in this directory is created by the template creator and creates a tab in the **Customization** section in the navigation bar on the left side of the screen. 
+The following would create a section called **Example** and would be in a file called `example.json`:
 ```json
 {
   "example":  {
@@ -173,7 +203,5 @@ Each route should have at least two files:
 ```
 
 ## Questions / Ideas / Fixes
-If you have any questions or ideas on how to make Koji better please either:
-- [send me a message](https://gokoji.com/profile/jones)
-or 
+If you have any questions or ideas on how to make Koji better please:
 - [join our discord server](https://discord.gg/eQuMJF6)

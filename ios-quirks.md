@@ -217,6 +217,10 @@ playSound(audioBuffers[0]);
 ---
 ## Ogg Vorbis
 Ogg Vorbis is [not supported](https://caniuse.com/#feat=ogg-vorbis) on iOS browsers.
+In-browser conversion is possible but not worth it.
+
+☝️ P5.js users can specify fallbacks with [soundFormats](https://p5js.org/examples/sound-soundformats.html).
+
 
 ---
 ## PWA Support
@@ -229,4 +233,4 @@ Checkout [Maximiliano Firtman's blog](https://medium.com/@firt/whats-new-on-ios-
 - https://bugs.webkit.org/
 - https://developer.apple.com/develop/
 - https://forums.developer.apple.com/welcome
-- https://support.apple.com/en-us/HT203794
+- [iOS sound](https://support.apple.com/en-us/HT203794)
