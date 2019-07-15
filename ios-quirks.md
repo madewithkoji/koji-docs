@@ -229,8 +229,12 @@ PWA lifecyles are different on iOS, and there are various bugs and unavailable f
 Checkout [Maximiliano Firtman's blog](https://medium.com/@firt/whats-new-on-ios-12-2-for-progressive-web-apps-75c348f8e945) on iOS PWA's
 
 ---
+## Misc Gotchas
+- Safari fails silently when attempting to create more than a few audio nodes (solution: switch to using Audio Buffers)
+
+---
 ## Resources
-- https://bugs.webkit.org/
-- https://developer.apple.com/develop/
-- https://forums.developer.apple.com/welcome
-- [iOS sound](https://support.apple.com/en-us/HT203794)
+- [webkit bug tracker](https://bugs.webkit.org/)
+- [apple developer portal](https://developer.apple.com/develop/)
+- [apple developer forums](https://forums.developer.apple.com/welcome)
+- [iOS sound pre-debug checklist](https://support.apple.com/en-us/HT203794)
