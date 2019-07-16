@@ -1,4 +1,25 @@
-# iOS Issues
+# iOS Issues <!-- omit in toc -->
+> This page exists to collect iOS issues and workarounds that can help others with iOS compatibility.
+> If you discover a bug + workaround you feel could help others, please open a GitHub issue against this repository!
+
+## Table of Contents <!-- omit in toc -->
+- [Bottom bar cuts off bottom of app](#Bottom-bar-cuts-off-bottom-of-app)
+- [Can't touch/click on item](#Cant-touchclick-on-item)
+- [Sounds not working](#Sounds-not-working)
+- [Touch events on added DOM nodes](#Touch-events-on-added-DOM-nodes)
+- [Touch events in iframe](#Touch-events-in-iframe)
+- [Viewport units don't report correct values](#Viewport-units-dont-report-correct-values)
+- [Audio workarounds](#Audio-workarounds)
+  - [Use unlock-audio-context module](#Use-unlock-audio-context-module)
+  - [P5 audio](#P5-audio)
+  - [Vanilla JS audio](#Vanilla-JS-audio)
+    - [Callback](#Callback)
+    - [Loop](#Loop)
+    - [AudioContext](#AudioContext)
+- [Ogg Vorbis](#Ogg-Vorbis)
+- [PWA Support](#PWA-Support)
+- [Misc Gotchas](#Misc-Gotchas)
+- [Resources](#Resources)
 
 ## Bottom bar cuts off bottom of app
 - [viewport units don't report correct values](#viewport-units-dont-report-correct-values)
@@ -13,7 +34,7 @@
 
 ---
 
-## touch events on added DOM nodes
+## Touch events on added DOM nodes
 iOS won't register a click/touch event to an element added after DOM load. This example should get click events working in Safari and iOS for both static and updated elements. Read more [here](https://www.quirksmode.org/blog/archives/2010/10/click_event_del_1.html).
 
 html
@@ -58,7 +79,7 @@ css
 [JSBin](https://jsbin.com/wabudabuqa/1/edit?html,css,js,output)
 
 ---
-## touch events in iframe 
+## Touch events in iframe 
 iOS conditionally denies touch events. Choose either of these workarounds.
 Taken from [here](https://stackoverflow.com/questions/41869122/touch-events-within-iframe-are-not-working-on-ios/50483933#50483933)
 
@@ -75,7 +96,7 @@ Add a dummy listener to the top window
 ```
 
 ---
-## viewport units don't report correct values
+## Viewport units don't report correct values
 iOS browsers do not report the correct viewport height.
 This bug affects `window.innerHeight` and `vh`.
 
