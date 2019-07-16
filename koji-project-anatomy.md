@@ -1,16 +1,38 @@
-# Anatomy of a Koji Project
+# Anatomy of a Koji Project <!-- omit in toc -->
+
+## Table of Contents <!-- omit in toc -->
+- [Environment](#Environment)
+- [Project Directory](#Project-Directory)
+- [README](#README)
+- [Koji Directory](#Koji-Directory)
+  - [**develop.json**](#developjson)
+  - [**deploy.json**](#deployjson)
+  - [.koji/customization](#kojicustomization)
+  - [.koji/scripts](#kojiscripts)
+  - [.koji/hooks](#kojihooks)
+- [The *frontend* directory](#The-frontend-directory)
+  - [frontend/package.json](#frontendpackagejson)
+  - [frontend/.internals](#frontendinternals)
+  - [frontend/common](#frontendcommon)
+  - [frontend/pages](#frontendpages)
+    - [frontend/pages/AnyDirectoryName](#frontendpagesAnyDirectoryName)
+  - [*variations in frontend structure](#variations-in-frontend-structure)
+- [The *backend* directory](#The-backend-directory)
+  - [backend/package.json](#backendpackagejson)
+  - [backend/index.js](#backendindexjs)
+  - [backend/routes](#backendroutes)
+  - [backend/routes/RouteNameHere](#backendroutesRouteNameHere)
+- [Questions / Ideas / Fixes](#Questions--Ideas--Fixes)
+
 ## Environment
 Koji provides you with a environment for developing and publishing an app in your browser. This includes a terminal connected to a running container with all the familiar tools, the same code editor that powers VSCode, and tools to help you deploy and publish your app to [withkoji.com](https://withkoji.com/).
  
----
- ## Project Directory
- The project directory at `/usr/src/app` contains your contains a git repository for your project with two remotes. An upstream remote for template projects your projects is starting with, and an origin remote that deployed versions are build from. Run `git config -l` to see the remotes in your project.
+## Project Directory
+The project directory at `/usr/src/app` contains your contains a git repository for your project with two remotes. An upstream remote for template projects your projects is starting with, and an origin remote that deployed versions are build from. Run `git config -l` to see the remotes in your project.
 
----
 ## README
 The `README.md` file is in your project directory and renders a markdown file for the **Overview** tab in the **Project** section on the left hand side.
 
----
 ## Koji Directory
 
 The `.koji` directory is where your configuration and script files live. The including [project configuration](#kojiproject) for development and deploy, [scripts](#kojihooks), and [customizations](#kojicustomization) for visual customization controls (vccs).
