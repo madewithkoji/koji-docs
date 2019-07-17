@@ -3,25 +3,25 @@
 
 ## Table of Contents <!-- omit in toc -->
 - [Articles/Docs](#ArticlesDocs)
-  - [Koji Project Anatomy](#Koji-Project-Anatomy)
-  - [Add a Custom Domain to Your Koji Application](#Add-a-Custom-Domain-to-Your-Koji-Application)
-  - [iOS Quirks and Their Fixes](#iOS-Quirks-and-Their-Fixes)
-  - [Koji Editor FAQ](#Koji-Editor-FAQ)
+  - [FAQ](#FAQ)
+  - [Project Anatomy](#Project-Anatomy)
+  - [Custom Domains](#Custom-Domains)
   - [koji-tools Package Docs](#koji-tools-Package-Docs)
+  - [iOS Support](#iOS-Support)
 - [Videos](#Videos)
   - [Getting Started With Koji](#Getting-Started-With-Koji)
 
 ## Articles/Docs
-### [Koji Project Anatomy](https://github.com/madewithkoji/koji-docs/blob/master/koji-project-anatomy.md)
+### [FAQ](https://github.com/madewithkoji/koji-docs/blob/master/koji-faq.md)
+- The most frequently asked questions about writing code in Koji# 
+### [Project Anatomy](https://github.com/madewithkoji/koji-docs/blob/master/koji-project-anatomy.md)
 - A walkthrough of all the files and formats in a typical koji template.
-### [Add a Custom Domain to Your Koji Application](https://medium.com/madewithkoji/add-a-custom-domain-to-your-koji-application-ce26b88d04c9)
+### [Custom Domains](https://medium.com/madewithkoji/add-a-custom-domain-to-your-koji-application-ce26b88d04c9)
 - An easy to follow medium article.
-### [iOS Quirks and Their Fixes](https://github.com/madewithkoji/koji-docs/blob/master/ios-quirks.md)
-- A list of common iOS compatability issues along with solutions.
-### [Koji Editor FAQ](https://github.com/madewithkoji/koji-docs/blob/master/koji-faq.md)
-- The most frequently asked questions about writing code in Koji.
 ### [koji-tools Package Docs](https://www.npmjs.com/package/koji-tools)
 - Documentation for koji-tools, a library to simplify common Koji processes.
+### [iOS Support](https://github.com/madewithkoji/koji-docs/blob/master/ios-quirks.md)
+- A list of common iOS compatibility issues along with solutions.
 ## Videos
 ### [Getting Started With Koji](https://youtu.be/xMPvUkkcpac)
-- A great introduction to customizing an existing template within Koji.
+great introduction to customizing an existing template within Koji.

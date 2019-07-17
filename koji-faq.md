@@ -10,6 +10,7 @@
 - [How do upload a file?](#How-do-upload-a-file)
 - [How can I download my code to my computer?](#How-can-I-download-my-code-to-my-computer)
 - [How do I get VCC's into my app?](#How-do-I-get-VCCs-into-my-app)
+- [Live preview / detached window doesn't show my app](#Live-preview--detached-window-doesnt-show-my-app)
 - [What are stubs?](#What-are-stubs)
 - [Where did the developer portal go?](#Where-did-the-developer-portal-go)
 
@@ -107,6 +108,17 @@ Koji.on('change', (scope, key, value) => {
 ```
 for more info on how to use koji-tools, checkout the koji-tools [docs](https://github.com/madewithkoji/koji-tools/blob/master/README.md)
 
+## Live preview / detached window doesn't show my app
+Start/restart your development server.
+1. In the terminal enter `Ctrl-C`
+2. Restart your server with `npm start` or what ever your start command is.
+
+Check that your `develop.json` file is configured correctly.
+1. Navigate to `develop.json` from **Settings > Development**.
+2. Verify paths, ports, and start commands are correct.
+    1. path: the directory your package.json is located 
+    2. port: the port your development server uses
+3. Verify the event hook's matching values are partial matches for what the development server prints to standard out when each of those events happen.
 
 ## What are stubs?
 Stubs can be used to save time when starting a project. For example if you are starting a project with the same bundler as another project, you can use the other projects `develop.json` to get started quickly.
