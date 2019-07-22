@@ -15,8 +15,9 @@
 - [Hows do I reset my project?](#hows-do-i-reset-my-project)
   - [Soft reset](#soft-reset)
   - [Hard reset](#hard-reset)
-- [What are stubs?](#what-are-stubs)
+- [Get latest client.](#get-latest-client)
 - [Where did the developer portal go?](#where-did-the-developer-portal-go)
+- [What are stubs?](#what-are-stubs)
 
 ## How do I get started?
 Checkout the [Getting Started WithKoji](http://bit.ly/StartWithKoji) tutorial video
@@ -180,11 +181,19 @@ eg:
 > ⚠️
 > Performing a hard reset DELETES your Koji editor state and re-downloads from your project's remote repository. If you have changes that you have not committed and pushed to your remote repository THEY WILL BE LOST."
 
-## What are stubs?
-Stubs can be used to save time when starting a project. For example if you are starting a project with the same bundler as another project, you can use the other projects `develop.json` to get started quickly.
+## Get latest client.
+To make sure you have the latest client.
 
-> ☝
-> the link to your project's stub can be found under **Settings** > **Repository**
+> Chrome: **Ctrl + F5** (Linux & Windows) or **Cmd + Shift + R** (Mac)
+
+> Firefox: **Ctrl + Shift + R** (Linux & Windows) or **Cmd + Shift + R** (Mac)
+
+> Safari: Hold down the **Shift** key and click the **Reload** toolbar button.
+
+> Edge: **Ctrl + F5**
+
+see full instructions for [hard refresh](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache#Bypassing_cache)
+or [clear cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache#Cache_clearing_and_disabling).
 
 ## Where did the developer portal go?
 Koji is no longer split into gokoji.com and withkoji.com. Everything is merged on to withkoji.com
@@ -194,3 +203,9 @@ This means.
 2. There is no longer an approval process. Just publish your project and share it with everyone!
 
 Watch the video announcement [here](https://youtu.be/Vub9epveeO0).
+
+## What are stubs?
+Stubs can be used to save time when starting a project. For example if you are starting a project with the same bundler as another project, you can use the other projects `develop.json` to get started quickly.
+
+> ☝
+> the link to your project's stub can be found under **Settings** > **Repository**
