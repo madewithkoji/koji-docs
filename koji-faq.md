@@ -30,6 +30,8 @@ Checkout the [Getting Started WithKoji](http://bit.ly/StartWithKoji) tutorial vi
 2. Click on an app you would like to use as a starter template.
 3. Click on the **Remix** button to start working on your new project.
 
+> if you want to start a fresh project try any of the [blank starter templates](https://withkoji.com/search/blank%20starter)
+
 ## How do I import my existing project?
 From anywere on withkoji.com press `Shift+Alt+L` and click on ***Create a new project from a remote repository*** in the developer options.
 Fill out the form with project name, git repository, stub, and click **Create project**.
