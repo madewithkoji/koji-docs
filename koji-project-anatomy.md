@@ -30,7 +30,7 @@ Koji provides you with an environment for developing and publishing an app in yo
 ## Project Directory
 The project directory at `/usr/src/app` includes a git repository for your project with two remotes.
 1. **origin remote** is the git remote projects are built and deployed from.
-2. **upstream remote** is the git remote projects are forked from (a repository on github for example)
+2. **upstream remote** is the git remote projects are [forked from](https://help.github.com/en/articles/fork-a-repo) (a repository on github for example)
 
 Run `git remote -v` to see the remotes in your project.
 ```sh
@@ -40,6 +40,7 @@ origin  https://projects.koji-cdn.com/8a129043-4c22-4be7-875f-38b422008695.git (
 upstream        https://projects.koji-cdn.com/e4d6b4bf-781a-4a49-9f0f-1d9cf3bbb7ff.git (fetch)
 upstream        https://projects.koji-cdn.com/e4d6b4bf-781a-4a49-9f0f-1d9cf3bbb7ff.git (push)
 ```
+read instructions for syncing with an upstream repo [here](https://help.github.com/en/articles/syncing-a-fork)
 
 ## README
 The `README.md` file is in your project directory and renders a markdown file for the **Overview** tab in the **Project** section on the left hand side.
