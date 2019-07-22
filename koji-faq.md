@@ -5,13 +5,13 @@
 ## Table of Contents <!-- omit in toc -->
 - [How do I get started?](#how-do-i-get-started)
 - [How do I start a new project?](#how-do-i-start-a-new-project)
+- [How do I import my existing project?](#how-do-i-import-my-existing-project)
 - [How do I create a file?](#how-do-i-create-a-file)
 - [How do I create a folder?](#how-do-i-create-a-folder)
 - [How do upload a file?](#how-do-upload-a-file)
 - [How can I download my code to my computer?](#how-can-i-download-my-code-to-my-computer)
 - [How do I get VCC's into my app?](#how-do-i-get-vccs-into-my-app)
 - [Live preview / detached window doesn't show my app](#live-preview--detached-window-doesnt-show-my-app)
-  - [parcel example](#parcel-example)
 - [Hows do I reset my project?](#hows-do-i-reset-my-project)
   - [Soft reset](#soft-reset)
   - [Hard reset](#hard-reset)
@@ -28,6 +28,12 @@ Checkout the [Getting Started WithKoji](http://bit.ly/StartWithKoji) tutorial vi
 1. Navigate to [withkoji.com/create](https://withkoji.com/create)
 2. Click on an app you would like to use as a starter template.
 3. Click on the **Remix** button to start working on your new project.
+
+## How do I import my existing project?
+From anywere on withkoji.com press `Shift+Alt+L` and click on ***Create a new project from a remote repository*** in the developer options.
+Fill out the form with project name, git repository, stub, and click **Create project**.
+> ⚠️
+> make sure you use the HTTPS address for the git repository
 
 ## How do I create a file?
 In the project sidebar:
@@ -126,16 +132,17 @@ Check that your `develop.json` file is configured correctly.
 
 > make sure there are no events without matching lines from standard out
 
-### parcel example
+**example:**
+
 standard out for running the `npm start` command.
 ```sh
 $ npm start
 
-$ hello-world-parcel@1.0.0 prestart hello-world-parcel
+$ hello-world@1.0.0 prestart hello-world
 $ koji-tools watch &
 
 
-$ hello-world-parcel@1.0.0 start hello-world-parcel
+$ hello-world@1.0.0 start hello-world
 $ npx parcel index.html
 
 koji-tools watching...
@@ -170,7 +177,8 @@ Navigate to the development settings at **Settings > Development** and click on 
 
 eg:
 `https://withkoji.com/projects/<project-id>?forceImageRebuild=true`
-> ⚠️ Performing a hard reset DELETES your Koji editor state and re-downloads from your project's remote repository. If you have changes that you have not committed and pushed to your remote repository THEY WILL BE LOST."
+> ⚠️
+> Performing a hard reset DELETES your Koji editor state and re-downloads from your project's remote repository. If you have changes that you have not committed and pushed to your remote repository THEY WILL BE LOST."
 
 ## What are stubs?
 Stubs can be used to save time when starting a project. For example if you are starting a project with the same bundler as another project, you can use the other projects `develop.json` to get started quickly.
