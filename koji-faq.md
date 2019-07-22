@@ -3,16 +3,19 @@
 > If there is a common or important question you feel is missing here, please open a GitHub issue against this repository!
 
 ## Table of Contents <!-- omit in toc -->
-- [How do I get started?](#How-do-I-get-started)
-- [How do I start a new project?](#How-do-I-start-a-new-project)
-- [How do I create a file?](#How-do-I-create-a-file)
-- [How do I create a folder?](#How-do-I-create-a-folder)
-- [How do upload a file?](#How-do-upload-a-file)
-- [How can I download my code to my computer?](#How-can-I-download-my-code-to-my-computer)
-- [How do I get VCC's into my app?](#How-do-I-get-VCCs-into-my-app)
-- [Live preview / detached window doesn't show my app](#Live-preview--detached-window-doesnt-show-my-app)
-- [What are stubs?](#What-are-stubs)
-- [Where did the developer portal go?](#Where-did-the-developer-portal-go)
+- [How do I get started?](#how-do-i-get-started)
+- [How do I start a new project?](#how-do-i-start-a-new-project)
+- [How do I create a file?](#how-do-i-create-a-file)
+- [How do I create a folder?](#how-do-i-create-a-folder)
+- [How do upload a file?](#how-do-upload-a-file)
+- [How can I download my code to my computer?](#how-can-i-download-my-code-to-my-computer)
+- [How do I get VCC's into my app?](#how-do-i-get-vccs-into-my-app)
+- [Live preview / detached window doesn't show my app](#live-preview--detached-window-doesnt-show-my-app)
+- [Hows do I reset my project?](#hows-do-i-reset-my-project)
+  - [Soft reset](#soft-reset)
+  - [Hard reset](#hard-reset)
+- [What are stubs?](#what-are-stubs)
+- [Where did the developer portal go?](#where-did-the-developer-portal-go)
 
 ## How do I get started?
 Checkout the [Getting Started WithKoji](http://bit.ly/StartWithKoji) tutorial video
@@ -119,6 +122,16 @@ Check that your `develop.json` file is configured correctly.
     1. path: the directory your package.json is located 
     2. port: the port your development server uses
 3. Verify the event hook's matching values are partial matches for what the development server prints to standard out when each of those events happen.
+
+## Hows do I reset my project?
+### Soft reset
+Navigate to the development settings at **Settings > Development** and click on ***Force restart project*** in the **Actions** section.
+### Hard reset
+Navigate to the development settings at **Settings > Development** and click on ***Hard reset project*** in the **Actions** section. If the editor menu is unavailable you can also perform a hard reset by appending the `forceImageRebuild=true` parameter to the project url.
+
+eg:
+`https://withkoji.com/projects/<project-id>?forceImageRebuild=true`
+> ⚠️ Performing a hard reset DELETES your Koji editor state and re-downloads from your project's remote repository. If you have changes that you have not committed and pushed to your remote repository THEY WILL BE LOST."
 
 ## What are stubs?
 Stubs can be used to save time when starting a project. For example if you are starting a project with the same bundler as another project, you can use the other projects `develop.json` to get started quickly.
