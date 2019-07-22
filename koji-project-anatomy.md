@@ -1,34 +1,45 @@
 # Anatomy of a Koji Project <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
-- [Environment](#Environment)
-- [Project Directory](#Project-Directory)
-- [README](#README)
-- [Koji Directory](#Koji-Directory)
+- [Environment](#environment)
+- [Project Directory](#project-directory)
+- [README](#readme)
+- [Koji Directory](#koji-directory)
   - [**develop.json**](#developjson)
   - [**deploy.json**](#deployjson)
   - [.koji/customization](#kojicustomization)
   - [.koji/scripts](#kojiscripts)
   - [.koji/hooks](#kojihooks)
-- [The *frontend* directory](#The-frontend-directory)
+- [The *frontend* directory](#the-frontend-directory)
   - [frontend/package.json](#frontendpackagejson)
   - [frontend/.internals](#frontendinternals)
   - [frontend/common](#frontendcommon)
   - [frontend/pages](#frontendpages)
-    - [frontend/pages/AnyDirectoryName](#frontendpagesAnyDirectoryName)
+    - [frontend/pages/AnyDirectoryName](#frontendpagesanydirectoryname)
   - [*variations in frontend structure](#variations-in-frontend-structure)
-- [The *backend* directory](#The-backend-directory)
+- [The *backend* directory](#the-backend-directory)
   - [backend/package.json](#backendpackagejson)
   - [backend/index.js](#backendindexjs)
   - [backend/routes](#backendroutes)
-  - [backend/routes/RouteNameHere](#backendroutesRouteNameHere)
-- [Questions / Ideas / Fixes](#Questions--Ideas--Fixes)
+  - [backend/routes/RouteNameHere](#backendroutesroutenamehere)
+- [Questions / Ideas / Fixes](#questions--ideas--fixes)
 
 ## Environment
-Koji provides you with a environment for developing and publishing an app in your browser. This includes a terminal connected to a running container with all the familiar tools, the same code editor that powers VSCode, and tools to help you deploy and publish your app to [withkoji.com](https://withkoji.com/).
+Koji provides you with an environment for developing and publishing an app in your browser. This includes a terminal connected to a running container with all the familiar tools, the same code editor that powers VSCode, and tools to help you deploy and publish your app to [withkoji.com](https://withkoji.com/).
  
 ## Project Directory
-The project directory at `/usr/src/app` contains your contains a git repository for your project with two remotes. An upstream remote for template projects your projects is starting with, and an origin remote that deployed versions are build from. Run `git config -l` to see the remotes in your project.
+The project directory at `/usr/src/app` includes a git repository for your project with two remotes.
+1. **origin remote** is the git remote projects are built and deployed from.
+2. **upstream remote** is the git remote projects are forked from (a repository on github for example)
+
+Run `git remote -v` to see the remotes in your project.
+```sh
+root@c8ce449b5538:/usr/src/app# git remote -v           
+origin  https://projects.koji-cdn.com/8a129043-4c22-4be7-875f-38b422008695.git (fetch)
+origin  https://projects.koji-cdn.com/8a129043-4c22-4be7-875f-38b422008695.git (push)
+upstream        https://projects.koji-cdn.com/e4d6b4bf-781a-4a49-9f0f-1d9cf3bbb7ff.git (fetch)
+upstream        https://projects.koji-cdn.com/e4d6b4bf-781a-4a49-9f0f-1d9cf3bbb7ff.git (push)
+```
 
 ## README
 The `README.md` file is in your project directory and renders a markdown file for the **Overview** tab in the **Project** section on the left hand side.
