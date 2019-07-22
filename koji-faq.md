@@ -11,6 +11,7 @@
 - [How can I download my code to my computer?](#how-can-i-download-my-code-to-my-computer)
 - [How do I get VCC's into my app?](#how-do-i-get-vccs-into-my-app)
 - [Live preview / detached window doesn't show my app](#live-preview--detached-window-doesnt-show-my-app)
+  - [parcel example](#parcel-example)
 - [Hows do I reset my project?](#hows-do-i-reset-my-project)
   - [Soft reset](#soft-reset)
   - [Hard reset](#hard-reset)
@@ -122,6 +123,44 @@ Check that your `develop.json` file is configured correctly.
     1. path: the directory your package.json is located 
     2. port: the port your development server uses
 3. Verify the event hook's matching values are partial matches for what the development server prints to standard out when each of those events happen.
+
+> make sure there are no events without matching lines from standard out
+
+### parcel example
+standard out for running the `npm start` command.
+```sh
+$ npm start
+
+$ hello-world-parcel@1.0.0 prestart hello-world-parcel
+$ koji-tools watch &
+
+
+$ hello-world-parcel@1.0.0 start hello-world-parcel
+$ npx parcel index.html
+
+koji-tools watching...
+Server running at http://localhost:1234 
+✨  Built in 1.92s.
+```
+
+develop.json
+```js
+{
+  "develop": {
+    "frontend": {
+      "path": ".",
+      "port": 1234,
+      "events": {
+        "started": "npm start",
+        "building": "koji-tools watching",
+        "built": "Built in",
+        "build-error": "npm ERR!"
+      },
+      "startCommand": "npm start"
+    }
+  }
+}
+```
 
 ## Hows do I reset my project?
 ### Soft reset
