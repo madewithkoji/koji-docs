@@ -19,6 +19,7 @@ deploy:
       secure: "$SECRETACCESSKEY"
   bucket: "com.withkoji.docs"
   region: "us-west-2"
+  skip_cleanup: true
 
 notifications:
   slack: gometa:iQkwpjzAdA8H07TsqqzoFmRM
