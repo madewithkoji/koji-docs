@@ -1,0 +1,15 @@
+name: 📓 General
+slug: general
+rank: 0
+
+sections:
+  - name: Welcome to Koji
+    slug: welcome
+    file: welcome.md
+
+  - name: Getting started
+    slug: getting-started
+    file: getting-started.md
+
+  - name: Youtube Channel
+    href: https://youtube.com
