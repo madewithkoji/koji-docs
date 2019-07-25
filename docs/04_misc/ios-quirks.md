@@ -1,25 +1,6 @@
-# iOS Issues <!-- omit in toc -->
+# iOS Issues
 > This page exists to collect iOS issues and workarounds that can help others with iOS compatibility.
 > If you discover a bug + workaround you feel could help others, please open a GitHub issue against this repository!
-
-## Table of Contents <!-- omit in toc -->
-- [Bottom bar cuts off bottom of app](#Bottom-bar-cuts-off-bottom-of-app)
-- [Can't touch/click on item](#Cant-touchclick-on-item)
-- [Sounds not working](#Sounds-not-working)
-- [Touch events on added DOM nodes](#Touch-events-on-added-DOM-nodes)
-- [Touch events in iframe](#Touch-events-in-iframe)
-- [Viewport units don't report correct values](#Viewport-units-dont-report-correct-values)
-- [Audio workarounds](#Audio-workarounds)
-  - [Use unlock-audio-context module](#Use-unlock-audio-context-module)
-  - [P5 audio](#P5-audio)
-  - [Vanilla JS audio](#Vanilla-JS-audio)
-    - [Callback](#Callback)
-    - [Loop](#Loop)
-    - [AudioContext](#AudioContext)
-- [Ogg Vorbis](#Ogg-Vorbis)
-- [PWA Support](#PWA-Support)
-- [Misc Gotchas](#Misc-Gotchas)
-- [Resources](#Resources)
 
 ## Bottom bar cuts off bottom of app
 - [viewport units don't report correct values](#viewport-units-dont-report-correct-values)

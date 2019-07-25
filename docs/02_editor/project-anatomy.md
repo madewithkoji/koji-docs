@@ -1,28 +1,4 @@
-# Anatomy of a Koji Project <!-- omit in toc -->
-
-## Table of Contents <!-- omit in toc -->
-- [Environment](#environment)
-- [Project Directory](#project-directory)
-- [README](#readme)
-- [Koji Directory](#koji-directory)
-  - [**develop.json**](#developjson)
-  - [**deploy.json**](#deployjson)
-  - [.koji/customization](#kojicustomization)
-  - [.koji/scripts](#kojiscripts)
-  - [.koji/hooks](#kojihooks)
-- [The *frontend* directory](#the-frontend-directory)
-  - [frontend/package.json](#frontendpackagejson)
-  - [frontend/.internals](#frontendinternals)
-  - [frontend/common](#frontendcommon)
-  - [frontend/pages](#frontendpages)
-    - [frontend/pages/AnyDirectoryName](#frontendpagesanydirectoryname)
-  - [*variations in frontend structure](#variations-in-frontend-structure)
-- [The *backend* directory](#the-backend-directory)
-  - [backend/package.json](#backendpackagejson)
-  - [backend/index.js](#backendindexjs)
-  - [backend/routes](#backendroutes)
-  - [backend/routes/RouteNameHere](#backendroutesroutenamehere)
-- [Questions / Ideas / Fixes](#questions--ideas--fixes)
+# Anatomy of a Koji Project
 
 ## Environment
 Koji provides you with an environment for developing and publishing an app in your browser. This includes a terminal connected to a running container with all the familiar tools, the same code editor that powers VSCode, and tools to help you deploy and publish your app to [withkoji.com](https://withkoji.com/).

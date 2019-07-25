@@ -1,23 +1,6 @@
-# Koji FAQ <!-- omit in toc -->
+# Koji FAQ
 > This page exists to answer common questions about the Koji platform. It is not a complete guide, but is a quick reference to commonly repeated questions.
 > If there is a common or important question you feel is missing here, please open a GitHub issue against this repository!
-
-## Table of Contents <!-- omit in toc -->
-- [How do I get started?](#how-do-i-get-started)
-- [How do I start a new project?](#how-do-i-start-a-new-project)
-- [How do I import my existing project?](#how-do-i-import-my-existing-project)
-- [How do I create a file?](#how-do-i-create-a-file)
-- [How do I create a folder?](#how-do-i-create-a-folder)
-- [How do upload a file?](#how-do-upload-a-file)
-- [How can I download my code to my computer?](#how-can-i-download-my-code-to-my-computer)
-- [How do I get VCC's into my app?](#how-do-i-get-vccs-into-my-app)
-- [Live preview / detached window doesn't show my app](#live-preview--detached-window-doesnt-show-my-app)
-- [Hows do I reset my project?](#hows-do-i-reset-my-project)
-  - [Soft reset](#soft-reset)
-  - [Hard reset](#hard-reset)
-- [Get latest client.](#get-latest-client)
-- [Where did the developer portal go?](#where-did-the-developer-portal-go)
-- [What are stubs?](#what-are-stubs)
 
 ## How do I get started?
 Checkout the [Getting Started WithKoji](http://bit.ly/StartWithKoji) tutorial video
