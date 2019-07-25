@@ -1,4 +1,4 @@
-- name: 📓 General
+- name: 💬 General
   slug: general
   path: 01_general
 
@@ -7,13 +7,6 @@
       slug: welcome
       path: welcome.md
 
-    - name: Getting started
-      slug: getting-started
-      path: getting-started.md
-
     - name: FAQ
       slug: faq
       path: faq.md
-
-    - name: Youtube Channel
-      href: https://youtube.com

@@ -1,3 +1,3 @@
 # Welcome to Koji
 
-Coming soon!
+Visit the FAQ section for more info!
