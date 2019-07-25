@@ -1,0 +1,10 @@
+name: 📓 Misc
+slug: misc
+
+sections:
+  - name: iOS Quirks
+    slug: ios-quirks
+    file: ios-quirks.md
+
+  - name: Youtube Channel
+    href: https://youtube.com
