@@ -1,18 +1,18 @@
-name: 📓 General
-slug: general
+- name: 📓 General
+  slug: general
 
-sections:
-  - name: Welcome to Koji
-    slug: welcome
-    file: welcome.md
+  sections:
+    - name: Welcome to Koji
+      slug: welcome
+      file: welcome.md
 
-  - name: Getting started
-    slug: getting-started
-    file: getting-started.md
+    - name: Getting started
+      slug: getting-started
+      file: getting-started.md
 
-  - name: FAQ
-    slug: faq
-    file: faq.md
+    - name: FAQ
+      slug: faq
+      file: faq.md
 
-  - name: Youtube Channel
-    href: https://youtube.com
+    - name: Youtube Channel
+      href: https://youtube.com

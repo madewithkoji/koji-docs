@@ -10,7 +10,8 @@ branches:
     - master
 
 script:
-  - pwd
+  - rm ./docs/sections.yml
+  - find . -type f -name '_section.yml' | sort -n | xargs cat >> ./docs/sections.yml
 
 deploy:
   provider: s3

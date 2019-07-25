@@ -1,7 +1,7 @@
-name: 📓 Editor
-slug: editor
+- name: 📓 Editor
+  slug: editor
 
-sections:
-  - name: Project anatomy
-    slug: project-anatomy
-    file: project-anatomy.md
+  sections:
+    - name: Project anatomy
+      slug: project-anatomy
+      file: project-anatomy.md
