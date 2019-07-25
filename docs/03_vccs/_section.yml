@@ -1,7 +1,8 @@
 - name: 📓 Visual Customization Controls
   slug: vccs
+  path: 03_vccs
 
   sections:
     - name: What are VCCs?
       slug: what-are-vccs
-      file: general.md
+      path: general.md

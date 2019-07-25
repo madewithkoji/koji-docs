@@ -1,7 +1,8 @@
 - name: 📓 Editor
   slug: editor
+  path: 02_editor
 
   sections:
     - name: Project anatomy
       slug: project-anatomy
-      file: project-anatomy.md
+      path: project-anatomy.md
