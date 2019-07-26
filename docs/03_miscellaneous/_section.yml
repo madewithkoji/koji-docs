@@ -1,0 +1,16 @@
+- name: 💅 Miscellaneous
+  slug: misc
+  path: 03_miscellaneous
+
+  sections:
+    - name: Common issues
+      slug: common-issues
+      path: common_issues.md
+
+    - name: Mobile Safari quirks
+      slug: mobile-safari-quirks
+      path: mobile_safari_quirks.md
+
+    - name: References
+      slug: references
+      path: references.md

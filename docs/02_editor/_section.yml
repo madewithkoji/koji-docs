@@ -6,3 +6,51 @@
     - name: Project anatomy
       slug: project-anatomy
       path: project-anatomy.md
+
+    - name: Editor overview
+      slug: editor-overview
+      path: editor_overview.md
+
+    - name: Project requirements
+      slug: project-requirements
+      path: requirements.md
+
+    - name: VCC reference
+      slug: vcc-reference
+      path: vcc_reference.md
+
+    - name: Deploying an app
+      slug: deploying-apps
+      path: deploying_an_app.md
+
+    - name: Plugins
+      slug: plugins
+      path: plugins.md
+
+    - name: Custom domains
+      slug: custom-domains
+      path: custom_domains.md
+
+    - name: Git and access tokens
+      slug: git-and-access-tokens
+      path: git_and_access_tokens.md
+
+    - name: Analytics
+      slug: analytics
+      path: analytics.md
+
+    - name: Database
+      slug: database
+      path: database.md
+
+    - name: Scheduled jobs
+      slug: scheduled-jobs
+      path: scheduled_jobs.md
+
+    - name: Keystore
+      slug: keystore
+      path: keystore.md
+
+    - name: Collaboration
+      slug: collaboration
+      path: collaboration.md

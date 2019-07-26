@@ -1,5 +1,3 @@
 # Welcome to Koji
 
-Visit the FAQ section for more info!
-
-More coming soon!
+Documentation is mostly empty right now, coming soon!

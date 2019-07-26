@@ -7,6 +7,26 @@
       slug: welcome
       path: welcome.md
 
+    - name: What is Koji
+      slug: what-is-koji
+      path: what_is_koji.md
+
+    - name: Remixing apps
+      slug: remixing-apps
+      path: remixing.md
+
+    - name: Sharing apps
+      slug: sharing-apps
+      path: sharing.md
+
+    - name: Embedding apps
+      slug: embedding-apps
+      path: embedding.md
+
+    - name: Profile apps
+      slug: profile-apps
+      path: profile_apps.md
+
     - name: FAQ
       slug: faq
       path: faq.md
