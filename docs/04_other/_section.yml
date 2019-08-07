@@ -3,11 +3,10 @@
   path: 04_other
 
   sections:
-
     - name: Koji Tutorials
       href: https://www.youtube.com/channel/UCc5jM6NwVNQc7b5APigEsMw
 
-    - name: Koji  blog
+    - name: Koji blog
       href: https://medium.com/madewithkoji
 
     - name: Discord (chat)

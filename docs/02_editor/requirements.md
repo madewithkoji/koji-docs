@@ -1,3 +1,9 @@
 # Project requirements
 
-Coming soon
+- develop.json
+
+- deploy.json
+
+- README.md
+
+- Importing a project from a remote git repo
