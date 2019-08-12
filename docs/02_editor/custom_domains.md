@@ -88,3 +88,10 @@ is ready to go.
 As a bonus, once you've configured a custom domain for use with a Koji app, you 
 can swap that domain to a new app without repeating the configuration process. 
 Your new app will immediately begin being served on the domain.
+
+## .well-known/koji
+
+The `/.well-known/koji` directory is available on all static frontend services 
+and provides a few resources:
+- `/.well-known/koji` returns a JSON document detailing the domain's current project ID and release ID
+- `/.well-known/archive.zip` returns a ZIP archive of the project's compiled frontend
