@@ -16,6 +16,17 @@ available include plugins for Google Analytics, a "password" wall that requires
 a user enter a secret code before proceeding to the app, and a "Subscribe to 
 me on Youtube" attribution overlay.
 
+## How do I enable a plugin?
+
+Enable plugins by navigating to the "Plugins" page in your project, under the 
+"Tools" section. From that page, you can click "Activate" to enable a plugin 
+for your project. It will move to the "Enabled" section. Click "Configure" to 
+open the configuration window for the plugin. Once configured, plugins are 
+instantly available in your deployed app. You do not need to redeploy.
+
+Note: You will *not* see plugins in the editor's live preview. This is because 
+plugins are only enabled on deployed projects.
+
 ## What does a plugin look like?
 
 A plugin consists of one or more injection instructions. An injection 
@@ -34,7 +45,7 @@ being sent to the user.
 
 ## Search Engine Optimization (SEO)
 
-This has implications for search engines and social crawlers, which often do 
+Plugins have implications for search engines and social crawlers, which often do 
 not render Javascript when indexing pages. For example, when you share a link 
 on Facebook, it looks for Open Graph `<meta>` tags in order to generate a share 
 card. In a typical client-side rendered Single Page App, using something like 
