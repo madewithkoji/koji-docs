@@ -59,6 +59,12 @@ side, they are available to all crawlers and bots without any additional
 configuration or 3rd-party services. By enabling the Open Graph plugin, for 
 example, apps are instantly ready to share on Facebook and Twitter.
 
+## Synthetic responses
+
+Plugins can also serve synthetic responses. An example of this is the PWA 
+plugin, which generates and serves a PWA manifest at `/manifest.webmanifest` 
+even though no such file actually exists within the project.
+
 ## Limitations
 
 At this time, Koji plugins are not designed to modify app functionality or to 
