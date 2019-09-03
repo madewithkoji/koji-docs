@@ -11,6 +11,10 @@
       slug: common-issues
       path: common_issues.md
 
+    - name: Leaderboard Implementation
+      slug: leaderboard-guide
+      path: leaderboard.md
+
     - name: Mobile Safari quirks
       slug: mobile-safari-quirks
       path: mobile_safari_quirks.md
