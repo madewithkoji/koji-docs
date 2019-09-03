@@ -27,10 +27,6 @@ For doing easy setup, we'll make use of [koji-leaderboard-api](https://www.npmjs
 
 ## Let's get started!
 
-<!-- We first need to remix a good scaffold that contains both `frontend` and `backend`.
-
-Let us choose [this Scaffold](https://withkoji.com/~dmitry/koji-react-scaffold-1). Go, remix it! -->
-
 ### Build the Backend
 
 To set [koji-leaderboard-api](https://www.npmjs.com/package/koji-leaderboard-api) in your backend, you need to spin up an Express server.
@@ -108,7 +104,7 @@ To fetch leaderboard data from the backend API endpoints in React, you don't hav
 
 You can implement the Leaderboard in React all by yourself by reading [this documentation](https://github.com/KumarAbhirup/koji-react-leaderboard#%EF%B8%8F-usage).
 
-Install the `koji-react-leaderboard` package and see how easy it is to get the Leaderboard data. 👇
+Install the `koji-react-leaderboard` package and see how easy it is to **get the Leaderboard data**. 👇
 
 ```javascript
 import React, { Component } from 'react'
@@ -132,10 +128,64 @@ class YourComponent extends Component {
 }
 ```
 
-Save data to Koji Leaderboard Database 👇
+**Save data to Koji Leaderboard** 👇
 
 ```javascript
-Writing ahead
+import React, { Component } from 'react'
+import Koji from '@withkoji/vcc'
+
+import { SaveToLeaderboard } from 'koji-react-leaderboard'
+
+class YourComponent extends Component {
+  state = { data: null }
+  
+  submitData = async (e, saveData) => {
+    e.preventDefault()
+
+    const response = await saveData({
+      name: 'ScreamerPlays',
+      score: 890,
+    })
+
+    this.setState({ data: response })
+  }
+
+  render() {
+    return (
+      <SaveToLeaderboard kojiLeaderboardBackendUri={Koji.config.serviceMap.backend}>
+        {(saveData, isLoading, isError) => {
+          // On Click the button saves the data
+          // Use the `saveData` as a function to save the data to the leaderboard.
+          return (
+            <React.Fragment>
+              <button onClick={e => this.submitData(e, saveData)}>Submit data</button>
+              {isLoading && <h2>Loading...</h2>}
+              {isError && <h2>Error</h2>}
+            </React.Fragment>
+          )
+        }}
+      </SaveToLeaderboard>
+    )
+  }
+}
 ```
 
-Documentation in construction.
+In both the above examples, you see the use of `Koji.config.serviceMap.backend` as the backend URL. Yes, with `@withkoji/vcc` package, you get the Koji backend URL which works on staging as well as on production. So, instead of hardcoding the backend URL, make use of `@withkoji/vcc`.
+
+## Links
+
+- `koji-leaderboard-api` NPM Package 👉 [http://npmjs.com/package/koji-leaderboard-api](http://npmjs.com/package/koji-leaderboard-api)
+
+- `koji-leaderboard-api` GitHub Repo 👉 [https://github.com/KumarAbhirup/koji-leaderboard-api](https://github.com/KumarAbhirup/koji-leaderboard-api)
+
+- `koji-react-leaderboard` NPM Package 👉 [http://npmjs.com/package/koji-react-leaderboard](http://npmjs.com/package/koji-react-leaderboard)
+
+- `koji-react-leaderboard` GitHub Repo 👉 [https://github.com/KumarAbhirup/koji-react-leaderboard](https://github.com/KumarAbhirup/koji-react-leaderboard)
+
+> The libraries are made in TypeScript. `koji-react-leaderboard` library uses React Hooks and TypeScript. All kinds of open source contributions to both the libraries are accepted.
+
+## Conclusion
+
+Including leaderboard in your Koji app can be fun. 
+
+If you have any queries regarding the leaderboard implementation, ask it in the **#support** channel of Koji's Official Discord Server. @koji-team will help. :) Peace.
