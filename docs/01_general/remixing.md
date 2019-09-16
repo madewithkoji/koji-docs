@@ -4,9 +4,9 @@
 
 Every app in Koji is a remix of another app. You can remix anything, from a barebones scaffold to a fully-featured 3D game, and everything in between. Remixing an app gives you full access to all the code in the Koji editor, Koji Visual Customization Controls (VCCs) that make it easy to customize an app without ever touching any code, and a fully-automated, one-click deploy tool to publish your remix as a new, standalone app.
 
-The first step when remixing an app is ask yourself, “What type of app do I want to make?”. The easiest way to get inspired is to browse the [“Create” page](https://withkoji.com/create) or the [“Start Remixing” page](https://withkoji.com/tag/start-remixing). Simply find a game you like, click on the “Remix” button, and start modifying it! There are many types of apps and games already on Koji, and it’s likely there is already another app that is similar to what you wish to make. You can remix it and build from there..
+The first step when remixing an app is ask yourself, “What type of app do I want to make?”. The easiest way to get inspired is to browse the “Create” page (add link) or the “Start Remixing” page (add link). Simply find a game you like, click on the “Remix” button, and start modifying it! There are many types of apps and games already on Koji, and it’s likely there is already another app that is similar to what you wish to make. You can remix it and build from there..
 
-The rest of this help document is intended for developers, or people who are already familiar with coding, and want to learn a bit more about how remixing works and how to build projects that are remixable on Koji. If you’re looking for a quick tutorial that will get you up and running remixing games, check out this [Youtube tutorial](https://www.youtube.com/watch?v=xMPvUkkcpac).
+The rest of this help document is intended for developers, or people who are already familiar with coding, and want to learn a bit more about how remixing works and how to build projects that are remixable on Koji. If you’re looking for a quick tutorial that will get you up and running remixing games, check out this Youtube tutorial (link).
 
 ## Creating a “blank” project
 
