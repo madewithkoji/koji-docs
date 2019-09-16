@@ -1,7 +1,4 @@
 # Remixing Apps
-## Suggested Reading
-- https://withkoji.com/docs
-- https://withkoji.com/docs/editor/vcc-reference
 
 ## What is remixing?
 
@@ -29,7 +26,7 @@ On the bottom right of an app, you see a button labelled “Remix.” Once click
 
 After you click remix, you’ll see a loading screen as the project is built for you and the environment is configured. This can take above a minute. If you’d like to learn more about what’s happening behind the scenes when you remix a project, and how we use Git to facilitate remixing, check out our [Tech Deep Dive Video](https://www.youtube.com/watch?v=BgpFGMH6VR4).
 
-Once the editor has loaded, you will see the “Project Overview” page. Thiswill give you an overview of what the project does and often how it works as well. The project overview page is provided by the app developer through the inclusion of a “README.md” file.
+Once the editor has loaded, you will see the “Project Overview” page. This will give you an overview of what the project does and often how it works as well. The project overview page is provided by the app developer through the inclusion of a “README.md” file.
 
 ![alt text](/docs/01_general/remixing/project_overview.png)
 
@@ -70,7 +67,7 @@ Before starting the coding section, remember a few requirements for making a gre
 - If the app has audio or music, it should not start playing until the user starts the app.
 - Use high-quality assets as it will bring more people to your app. Remember, visuals are the first that people will notice about your app.
 
-## VCC(Virtual Customization Controls) Data
+## VCC (Virtual Customization Controls) Data
 
 To learn how to set up VCCs, and to learn more about the types of variables that can be used, read the VCC Reference help page here: https://withkoji.com/docs/editor/vcc-reference 
 
@@ -164,3 +161,7 @@ Once finished with the title, thumbnail, description and settings you can press 
 If you have chosen to have your app to be unlisted, it will still be deployed to Koji, but will not be shown to others. You can access your app under the directory you will now see “Open published app” available to click. This will take you to your deployed app where you can get and share the app URL with others.
 
 ![alt text](/docs/01_general/remixing/overview_directory.png)
+
+## Additional reference
+- https://withkoji.com/docs
+- https://withkoji.com/docs/editor/vcc-reference
