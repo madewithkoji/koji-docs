@@ -19,6 +19,10 @@
       slug: mobile-safari-quirks
       path: mobile_safari_quirks.md
 
+    - name: Developing for KaiOS
+      slug: developing-for-kaios
+      path: developing_for_kaios.md
+
     - name: References
       slug: references
       path: references.md
