@@ -44,6 +44,15 @@
   - Secret allows for keys to be set without the need to worry about them showing when a project gets remixed. It will only be visible in your project and no others even if they are remixed.
   - ![alt text](/docs/02_editor/vcc_reference/secret_customization.png)
 
+### Range
+  - Allows the user to drag a slider to specify a numeric value. Can be configured with a minimum value, maximum value, and a default increment/step size.
+
+### Select
+  - Lets the user choose from a predefined set of options
+
+### 3D object
+  - User can browse and import 3d OBJs from Google Poly
+
 **Have ideas for VCC? Let us know!**
 
 ## Developer information
@@ -96,3 +105,63 @@ Inside each field are the different values that are used to show that variable t
   - The “type” is what type of variable this is, image/sound/color/text/textarea/secret. Each will be displayed a different way, such as above, a boolean will be shown as a ‘toggle’ or ‘switch’ that can be set to true or false.
 
 For use of the secret field, it would be best to check out the following project, https://withkoji.com/~sean/teams-sample it is a sample that shows how the secret field is used within a project.
+
+### VCC definition reference
+
+#### Range
+```
+{
+  "key": "variableKey",
+  "name": "Example variable",
+  "description": "An example range variable",
+  "type": "range",
+  "typeOptions": {
+    "min": 0,
+    "max": 100,
+    "step": 1
+  }
+}
+```
+
+#### Select
+```
+{
+  "key": "variableKey",
+  "name": "Example variable",
+  "description": "An example select variable",
+  "type": "select",
+  "typeOptions": {
+    "placeholder": "Choose an option...",
+    "options": [
+      { "value": "one", "label": "Value one" },
+      { "value": "two", "label": "Value two" },
+      { "value": "three", "label": "Value three" }
+    ]
+  }
+}
+```
+
+#### 3D object
+Definition:
+```
+{
+  "key": "variableKey",
+  "name": "Example variable",
+  "description": "An example 3D object variable",
+  "type": "obj"
+}
+```
+Result:
+```
+{
+  "obj": "https://objects.koji-cdn.com/c2755e73-1d5f-4b1e-9ede-51bba8e4b7ff/6dM1J6f6pm9/Mesh_Cat.obj",
+  "mtl": "https://objects.koji-cdn.com/c2755e73-1d5f-4b1e-9ede-51bba8e4b7ff/6dM1J6f6pm9/Mesh_Cat.mtl",
+  "texturePath": "https://objects.koji-cdn.com/c2755e73-1d5f-4b1e-9ede-51bba8e4b7ff/6dM1J6f6pm9/",
+  "rawResources": [
+    "https://objects.koji-cdn.com/c2755e73-1d5f-4b1e-9ede-51bba8e4b7ff/6dM1J6f6pm9/Mesh_Cat.mtl",
+    "https://images.koji-cdn.com/c2755e73-1d5f-4b1e-9ede-51bba8e4b7ff/6dM1J6f6pm9/Tex_Cat.png",
+    "https://objects.koji-cdn.com/c2755e73-1d5f-4b1e-9ede-51bba8e4b7ff/6dM1J6f6pm9/Mesh_Cat.obj"
+  ],
+  "thumbnailUrl": "https://images.koji-cdn.com/c2755e73-1d5f-4b1e-9ede-51bba8e4b7ff/6dM1J6f6pm9/thumbnail.jpg"
+},
+```
