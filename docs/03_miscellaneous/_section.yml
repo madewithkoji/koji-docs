@@ -23,6 +23,10 @@
       slug: developing-for-kaios
       path: developing_for_kaios.md
 
+    - name: Trusted Web activities
+      slug: trusted-web-activities
+      path: trusted_web_activities.md
+
     - name: References
       slug: references
       path: references.md

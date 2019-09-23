@@ -108,6 +108,22 @@ For use of the secret field, it would be best to check out the following project
 
 ### VCC definition reference
 
+#### Secret
+```
+{
+  "key": "apiKey",
+  "name": "Your Mailchimp API Key",
+  "type": "secret",
+  "typeOptions": {
+    "suggestedKeystoreName": "mailchimp/api_key",
+    "usageDescription": "Your Mailchimp API key is used to send emails collected by your app to Mailchimp",
+    "procurementInstructions": "You can find your API key: https://mailchimp.com/help/about-api-keys/"
+  }
+}
+```
+
+Values of secret keys appear in VCC JSON as `koji-keystore://KEYSTORE_NAME` and are only resolved in the project's `env` as `process.env.KOJI_SECRETS_MAP`. You can access their unencrypted values by calling `Koji.resolveSecret(keyName)` in your app.
+
 #### Range
 ```
 {
