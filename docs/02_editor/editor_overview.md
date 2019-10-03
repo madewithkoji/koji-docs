@@ -1,26 +1,26 @@
 # Editor overview
 
-- What is the remote editor
+- [What is the remote editor](#remoteEditor)
 
-- Provisioning a dev server
+- [Provisioning a dev server](#devServer)
 
-- Terminals, live preview, "your computer in the cloud"
+- [Terminals, live preview, "your computer in the cloud"](#terminals)
 
-- Staging & live preview, remote debugging
+- [Staging & live preview, remote debugging](#staging)
 
-- Route tester
+- [Route tester](#route)
 
-- VCCs vs. code
+- [VCCs vs. code](#vcc)
 
 
-## What is the remote editor?
+## <a name="remoteEditor"></a>What is the remote editor?
 The remote editor or Koji Editor is the online editor that appears when you open your game from the project menu. This is where you create your game, it contains code needed for the VCC’s, the game, plugins and leaderboard if necessary. The remote editor works on mobile devices as well so you can develop anywhere.
 
 
-## Provisioning a Dev Server
+## <a name="devServer"></a>Provisioning a Dev Server
 A dev server is created when you remix any game. Your game will be backed up on GitHub and the link to the repository on GitHub can be found under Advanced/Setting/Repository.
 
-## Terminals, Live Preview, “Your computer in the cloud”
+## <a name="terminals"></a>Terminals, Live Preview, “Your computer in the cloud”
 Terminals are located on the bottom of the project page.
 
 ![alt text](/docs/02_editor/editor_overview/project_overview.png)
@@ -29,7 +29,7 @@ Opening a project will have a frontend and backend terminal open by default. Mor
 - If you close the frontend or backend terminal and want to bring back, you go to “Settings/Development” and press “Force Restart Project”. This will take about 30 seconds and will have the frontend and backend terminals open again.
 The Live Preview is a running preview of your app. You can swap from a phone view to either a tablet or embedded view. This is for you to test your app on different resolutions as your app should be built to support all sizes and resolutions.
 
-## Staging & Live Preview, Remote Debugging
+## <a name="staging"></a>Staging & Live Preview, Remote Debugging
 This is where you can test and debug your game as you are working on it.
 
 Live Preview” shows your current app running. On the bottom of Live Preview, there are four buttons,
@@ -44,9 +44,9 @@ Even when your app is running remotely, you will still have access to the consol
 
 ![alt text](/docs/02_editor/editor_overview/remote_tab.png)
 
-## Route Tester
+## <a name="route"></a>Route Tester
 Routes is used for testing backend routes. You Can build your request and then execute it by pressing the “Send Request” button. The “Fetch” tab generates a code snippet for the current request that you can easily add to your app’s frontend.
 
-## VCCs Vs. Code
+## <a name="vcc"></a>VCCs Vs. Code
 VCC's are Visual Customization Controls that allow another person who will remix your project to easily modify a game or app to look and feel how they want it to. Games should have as much of their variables open to VCC so others can customize the game as much as they want. The games should be easy to customize without the need to change any code if possible. 
 The code of your games should also be clean, easy to read and commented well. When other developers remix your game you want them to be able to easily follow along with what your setup is and the flow of the game setup.
