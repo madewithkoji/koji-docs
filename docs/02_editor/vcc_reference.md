@@ -106,6 +106,10 @@ Inside each field are the different values that are used to show that variable t
 
 For use of the secret field, it would be best to check out the following project, https://withkoji.com/~sean/teams-sample it is a sample that shows how the secret field is used within a project.
 
+### Composing VCCs
+
+VCC types can be composed using higher-order controls. Currently, the only higher order control available is the array control, which lets you create a list of multiple values from a single VCC definition. To create an array, define the VCC type as `"type": "array<T>"` where `T` is a valid VCC type (e.g., `array<image>`). You can also use the shorthand `T[]`.
+
 ### VCC definition reference
 
 #### Secret
