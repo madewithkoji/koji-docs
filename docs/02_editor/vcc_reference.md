@@ -108,7 +108,18 @@ For use of the secret field, it would be best to check out the following project
 
 ### Composing VCCs
 
-VCC types can be composed using higher-order controls. Currently, the only higher order control available is the array control, which lets you create a list of multiple values from a single VCC definition. To create an array, define the VCC type as `"type": "array<T>"` where `T` is a valid VCC type (e.g., `array<image>`). You can also use the shorthand `T[]`.
+VCC types can be composed using higher-order controls. Currently, the only higher order control available is the array control, which lets you create a list of multiple values from a single VCC definition. To create an array, define the VCC type as `"type": "array<T>"` where `T` is a valid VCC type (e.g., `array<image>`). You can also use the shorthand `T[]`. You can optionally specify a maximum and/or minimum number of elements using the `arrayOptions` key. For example:
+```
+{
+  "key": "myControl",
+  "name": "My control",
+  "type": "string[]",
+  "arrayOptions": {
+    "min": 2,
+    "max": 10
+  }
+}
+```
 
 ### VCC definition reference
 
