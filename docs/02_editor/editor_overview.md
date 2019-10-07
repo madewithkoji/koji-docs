@@ -1,11 +1,11 @@
 # Editor overview
 
-- [What is the Koji Editor](#editor)
-- [Code hosting and source control](#source-control)
-- [Environment and terminals](#environment)
+- [What is the Koji Editor](#what-is-the-koji-editor)
+- [Code hosting and source control](#code-hosting-and-source-control)
+- [Environment and terminals](#environment-and-terminals)
 - [Live preview](#live-preview)
 
-## <a name="editor"></a>What is the Koji Editor?
+## What is the Koji Editor?
 The Koji Editor is browser-based integrated development environment (IDE). You can use the Koji editor to create apps and games. The editor contains all of your project's code, Visual Customization Controls (VCCs) generated from the project's code, publish/deploy management interfaces, and interfaces to other production tools like Koji Database, Custom Domains, Plugins, and more.
 
 ![alt text](/docs/02_editor/editor_overview/project_overview.png)
@@ -18,17 +18,17 @@ Development servers are created on demand and automatically hibernate after 15 m
 
 You can access the Koji editor from any device with a web browser, you do not need to install any additional third party software to use the web editor. This means you can remix, edit, and publish Koji apps on tablets and mobile phones, in addition to computers.
 
-## <a name="source-control"></a>Code hosting and source control
+## Code hosting and source control
 
 Each Koji project is backed by a Git repository. When you remix a project, Koji clones that project's Git repository to your account and loads it in the editor. When you publish your app from the editor, Koji commits your changes and pushes to master. This push triggers a deploy. You can think of the state of your Koji editor in the same way as the state of a Git repository on your computer -- that is, it is a working HEAD of your repository. This means that if you make changes to your project from outside the Koji editor, you will need to `git pull` those changes from within the Koji editor in order to see them.
 
 If you would like to use a remote editor, you will need to generate a Git Access Token from your Account Settings. You can use this access token in place of a password when cloning your repositories. To find the remote URL of your project's Git repository, navigate to "Settings" -> "Repository" from within the Koji editor.
 
-## <a name="environment"></a>Environment and terminals
+## Environment and terminals
 
 From the Koji web editor, you have access to an entire remote Linux development server. You can use the terminals at the bottom of the screen to run any commands you like.
 
-## <a name="live-preview"></a>Live preview
+## Live preview
 
 ### Inline preview
 The Live Preview in the editor is a running preview of your app.
@@ -46,5 +46,5 @@ Even when your app preview is open in another tab, you will still have access to
 
 ![alt text](/docs/02_editor/editor_overview/remote_tab.png)
 
-### <a name="route"></a>Route Tester
+### Route Tester
 The "Routes" tab is used for testing backend routes. You can build your request and then execute it by pressing the “Send Request” button. The “Fetch” tab generates a code snippet for the current request that you can easily add to your app’s frontend.
