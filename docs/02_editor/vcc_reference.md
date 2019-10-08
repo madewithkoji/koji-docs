@@ -108,7 +108,9 @@ For use of the secret field, it would be best to check out the following project
 
 ### Composing VCCs
 
-VCC types can be composed using higher-order controls. Currently, the only higher order control available is the array control, which lets you create a list of multiple values from a single VCC definition. To create an array, define the VCC type as `"type": "array<T>"` where `T` is a valid VCC type (e.g., `array<image>`). You can also use the shorthand `T[]`. You can optionally specify a maximum and/or minimum number of elements using the `arrayOptions` key. For example:
+VCC types can be composed using higher-order controls. 
+
+The array control lets you create a list of multiple values from a single VCC definition. To create an array, define the VCC type as `"type": "array<T>"` where `T` is a valid VCC type (e.g., `array<image>`). You can also use the shorthand `T[]`. You can optionally specify a maximum and/or minimum number of elements using the `arrayOptions` key. For example:
 ```
 {
   "key": "myControl",
@@ -120,6 +122,52 @@ VCC types can be composed using higher-order controls. Currently, the only highe
   }
 }
 ```
+
+The object control lets you define an object or struct that is made up of more VCCs. For example, imagine if you were making a game that let users define multiple enemies. Each enemy might need a few pieces of metadata, like a name, image, strength level, and hitpoints. You can use the object type to compose a custom VCC that defines an enemy, and then optionally extend it as an array to create a list of enemies!
+
+Example:
+```
+{
+  "key": "enemies",
+  "name": "Enemies",
+  "description": "List of enemies in the game",
+  "type": "object<Enemy>[]",
+  "typeOptions": {
+    "Enemy": {
+      "name": {
+        "name": "Enemy name",
+        "description": "The name of the enemy",
+        "type": "text"
+      },
+      "sprite": {
+        "name": "Enemy sprite",
+        "description": "Image to use for the enemy",
+        "type": "image"
+      },
+      "strLevel": {
+        "name": "Strength level",
+        "type": "range",
+        "typeOptions": {
+          "min": 0,
+          "max": 100,
+          "step": 1
+        }
+      },
+      "hitpoints": {
+        "name": "Hitpoints",
+        "type": "range",
+        "typeOptions": {
+          "min": 0,
+          "max": 20,
+          "step": 1
+        }
+      }
+    }
+  }
+}
+```
+
+If you did not want the stuct to be available as an array, simply remove the brackets from the type signature (`"type": "object<Enemy>"`).
 
 ### VCC definition reference
 
