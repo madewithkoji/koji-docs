@@ -53,8 +53,6 @@
 ### 3D object
   - User can browse and import 3d OBJs from Google Poly
 
-**Have ideas for VCC? Let us know!**
-
 ## Developer information
 
 ### Adding More Customization Areas
@@ -245,3 +243,7 @@ Result:
   "thumbnailUrl": "https://images.koji-cdn.com/c2755e73-1d5f-4b1e-9ede-51bba8e4b7ff/6dM1J6f6pm9/thumbnail.jpg"
 },
 ```
+
+## Custom VCCs
+
+You can create fully custom VCCs by implementing `@withkoji/custom-vcc-sdk` into a Koji project, and then publishing that project as a subdomain of `koji-vccs.com`. For more information, view the Readme of [`@withkoji/custom-vcc-sdk](https://github.com/madewithkoji/koji-custom-vcc-sdk).
