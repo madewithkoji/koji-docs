@@ -31,9 +31,27 @@ const database = new Database();
 Your access credentials will automatically be configured from environment 
 variables.
 
-For a list of database methods available, visit the 
-[Github repository](https://github.com/madewithkoji/koji-database-sdk#readme) 
-for the database package.
+### Database methods
+
+Koji Database is similar to datastores like Google Firebase. You can see 
+available methods by browsing the client-side SDK source code 
+[here](https://github.com/madewithkoji/koji-database-sdk/blob/master/src/adapter/DatabaseAdapter.ts).
+
+### Uploading and storing user files
+
+If your app allows users to upload files (images, profile pictures, audio, etc.),
+you can use `@withkoji/database` to upload those files to your project's CDN. 
+Simply construct a new database and upload the file using:
+```
+const uploadedUrl = database.uploadFile(path, filename, mimetype);
+```
+
+This will return either an `images.koji-cdn.com` or an `objects.koji-cdn.com` 
+URL, depending on the type of resource uploaded. The filename specified when 
+uploading the file will be automatically modified to include a random string in 
+order to prevent collisions.
+
+There is a limit of 10MB per file uploaded using this method.
 
 ## Database explorer
 
