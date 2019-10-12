@@ -118,7 +118,8 @@ The array control lets you create a list of multiple values from a single VCC de
   "type": "string[]",
   "arrayOptions": {
     "min": 2,
-    "max": 10
+    "max": 10,
+    "addItemLabel": "Add character" // if not set, the button shows "Add item"
   }
 }
 ```
