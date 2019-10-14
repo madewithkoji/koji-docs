@@ -53,6 +53,9 @@
 ### 3D object
   - User can browse and import 3d OBJs from Google Poly
 
+### File
+  - User can upload any file
+
 ## Developer information
 
 ### Adding More Customization Areas
