@@ -1,9 +1,9 @@
 - name: 📓 Other
   slug: other
-  path: 04_other
+  path: 05_other
 
   sections:
-    - name: Koji Tutorials
+    - name: Koji Youtube channel
       href: https://www.youtube.com/channel/UCc5jM6NwVNQc7b5APigEsMw
 
     - name: Koji blog

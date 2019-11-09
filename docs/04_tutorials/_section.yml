@@ -1,0 +1,8 @@
+- name: 📖 Tutorials
+  slug: tutorials
+  path: 04_tutorials
+
+  sections:
+    - name: Creating Your First Custom VCC
+      slug: creating-your-first-custom-vcc
+      path: creating_your_first_custom_vcc.md
