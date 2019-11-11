@@ -3,10 +3,6 @@
   path: 03_miscellaneous
 
   sections:
-    - name: Tutorials
-      slug: tutorials
-      path: tutorials.md
-
     - name: Common issues
       slug: common-issues
       path: common_issues.md
