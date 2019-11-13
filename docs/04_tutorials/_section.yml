@@ -3,6 +3,9 @@
   path: 04_tutorials
 
   sections:
+    - name: Adding a Service to Your Project
+      slug: adding-a-service
+      path: adding_a_service.md
     - name: Creating Your First Custom VCC
       slug: creating-your-first-custom-vcc
       path: creating_your_first_custom_vcc.md
