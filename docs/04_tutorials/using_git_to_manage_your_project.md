@@ -67,13 +67,14 @@ The Repository Settings pane will show links to two repositories. The first is c
 
 Copy the Remote Repository URL, open a Terminal window, navigate to the directory on your local drive where you want to save your project and:
 
-*  Type `git clone` followed by a space
+*  Type `git clone`
+*  Type a space
 *  Paste the repository URL that you just copied
 *  Type a space
-*  Type the name of the director that you want Git to create to hold your project
+*  Type the name of the directory that you want Git to create to hold your project
 *  Press the Enter key.
 
-Your Terminal window might now look something like this:
+Your Terminal window might now look something like this (you may need scroll to see the complete line):
 
 ```bash
 ~/Repos/Koji$ git clone https://projects.koji-cdn.com/a70f8329-e89e-48b0-8d85-7658c1542b9f.git MyKojiGame
