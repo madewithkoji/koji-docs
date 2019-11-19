@@ -164,8 +164,11 @@ You will have to wait a few moments while your project is published, then you wi
 
 ![Open your published game](working_locally/live.png "Open your published game")
 
-
 **Note:** By default, from now on, each time you publish your project, it will be published _unlisted_. When your project is ready for the world to see, don't forget to remove this setting.
+
+## Automatic Commit
+
+When you publish your project, the Koji Online Editor will automatically create a new Git commit, with the commit message "Manual deploy".
 
 ---
 
