@@ -149,9 +149,9 @@ drwxrwxr-x  6 kojicoder dev 4096 nov  5 16:38 .koji
 
 In this section of the tutorial, you have seen how to:
 
-*   Find the required tools: Git, Node.js, a Terminal application and a text editor
-*   Find the URL of Koji's `origin` repository for your project
-*   Find the username and password that allows you to interact with Koji's `origin` repository
-*   Clone the Git repository for your project onto your local machine
+1.   Find the required tools: Git, Node.js, a Terminal application and a text editor
+2.   Find the URL of Koji's `origin` repository for your project
+3.   Find the username and password that allows you to interact with Koji's `origin` repository
+4.   Clone the Git repository for your project onto your local machine
 
 However, before you can launch your project locally, you will need to install a set of Node module dependencies. That is the topic of the next section in this tutorial: [Working Locally](working_locally.md).
