@@ -1,6 +1,11 @@
-# Working Locally
+# Using Git to Manage Your Project
 
-Koji provides a feature-rich online project editor, but as a developer you are probably used to working with your own suite of development tools. In this tutorial, I will describe how to clone a Koji project template to your development machine, so that you can use it locally as the starting point for your own game.
+Koji provides a feature-rich online project editor, but as a developer you are probably used to working with your own suite of development tools. In this tutorial, I will describe how to use Git to clone a Koji project template to your development machine, so that you can work on it locally to build your own game.
+
+This is the first section in a three-part tutorial. You can find the other two sections here:
+
+2. [Working Locally](working_locally.md)
+3. [Publishing the Project You Developed Locally](publishing_your_local_project.md)
 
 ## Required Tools
 
@@ -18,17 +23,35 @@ In order to develop your Koji project locally, you will need four tools:
     *   [Linux Terminal](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/) on Linux
 4.  A text editor. This is where you will edit your code, and save it as plain-text files. A text editor that is designed for writing code will help you in many ways. Computers do exactly what you tell them to do, even if you tell them the wrong things. A dedicated text editor will make it easier for you to find the right words to use, and to find where you have used the wrong words or the wrong structure. You can find a list of recommended text editors [here](https://kinsta.com/blog/best-text-editors/), including several which are both excellent and free.
 
-# # # REMIXING YOUR FIRST PROJECT # # #
+## Choosing a template for your project
+
+You can find many game templates on the [Scaffolds (For Developers)](https://withkoji.com/tag/scaffolds-(for-developers)?sort=remixes) page. The instructions you find below should work well with any of them. For this tutorial, I am going to use Svarog's [Element Match](https://withkoji.com/~Svarog1389/element-match) template, because it features in the [How To](https://www.youtube.com/watch?v=R7FAL2IV0sk&feature=youtu.be) video tutorial, and it illustrates a completed game with code that runs both on the backend and on the frontend. If you choose to work on a different project, the screenshots in this tutorial will not match what you see on your own screen.
+
+To get started, visit the [Element Match](https://withkoji.com/~Svarog1389/element-match) project and click on the `∞ Remix` button. After a short loading time, Koji's Online Editor will open.
+
+## Editor Overview
+
+The Online Editor is divided into 4 sections:
+
+1.  A column of Links on the left
+2.  An editing pane which allows multiple open tabs in the center
+3.  A Preview pane on the right
+4.  A collapsible Terminal pane, with multiple tabs, at the bottom
+
+![The Koji Online Editor](working_locally/editor.png "The Koji Online Editor")
+
+**Note:** For more details about remixing a project in the Online Editor, please read the [Remixing Apps](../01_general/remixing.md) tutorial.
+
 
 ## Cloning the Git Repository
 
-When you click on Remix (for any project), Koji creates a new clone of the project's Git repository just for you. This new repository will have a unique identifier string. If you clone the same project twice, you will get a different identifier string each time. The Koji repositories are stored at https://projects.koji-cdn.com/.
+When you click on `∞ Remix` (for any project), Koji creates a new fork of the project's Git repository just for you. Your new repository will have a unique identifier string. If you fork the same project twice, you will get a different identifier string each time. The Koji repositories are stored at https://projects.koji-cdn.com/.
 
-In order to clone the Koji repository locally, you will need three strings:
+In order to clone your Koji repository locally, you will need three strings:
 
 *   The URL of the repository on https://projects.koji-cdn.com/
 *   The Username that you created when you registered with Koji
-*   An Access Token, which you will need to generate and store securely.
+*   An Access Token, which you will need to generate and store securely (see below).
 
 You will need to use the repository URL only once, you should know your Username by heart, but the Access Token is a 32-character randomly-generated hexadecimal number, and you will need to make a note of it in a safe place.
 
@@ -38,14 +61,25 @@ To find the URL of the Koji repository, open your project page and in the bottom
 
 ![Open the Repository Settings](working_locally/repository.png "Open the Repository Settings")
 
-The Repository Settings pane will show links to two repositories. The first is called Remote Repository, and this is your personal repository. (The second, called the Upstream Repository, is the one your project was cloned from. You can ignore this... or create a fork of it if you want to suggest changes and make Pull Requests for it, so that other users of this template can benefit.)
+The Repository Settings pane will show links to two repositories. The first is called Remote Repository, and this is the personal repository for your game.
 
-Copy the Remote Repository URL, open a Terminal window, navigate to the directory where you want to save your project and type `git clone` followed by a space, and then paste the repository URL that you just copied. Press the Enter key. Your Terminal window might now look something like this:
+**Note:** The second repository in the list – the Upstream Repository – is the one that your project was forked from. If your intention is to propose improvements to the scaffold itself, then you can modify your Remote Repository and subsequently create Pull Requests, so that the Koji team can evaluate your proposed changes and update the scaffold if they like what you've done.
 
-<pre class="terminal"><span class="path">~/Repos/Koji$</span> **git clone https://projects.koji-cdn.com/<span class="custom">a70f8329-e89e-48b0-8d85-7658c1542b9f.git</span>**
-Cloning into 'a70f8329-e89e-48b0-8d85-7658c1542b9f'...
+Copy the Remote Repository URL, open a Terminal window, navigate to the directory on your local drive where you want to save your project and:
+
+*  Type `git clone` followed by a space
+*  Paste the repository URL that you just copied
+*  Type a space
+*  Type the name of the director that you want Git to create to hold your project
+*  Press the Enter key.
+
+Your Terminal window might now look something like this:
+
+```bash
+~/Repos/Koji$ git clone https://projects.koji-cdn.com/a70f8329-e89e-48b0-8d85-7658c1542b9f.git MyKojiGame
+Cloning into 'MyKojiGame'...
 Username for 'https://projects.koji-cdn.com':
-</pre>
+```
 
 The Terminal is asking for your Username, and after that it will ask for a Password. This password is **not** the same as the password you use to log in to Koji. It is a strong machine-generated access key, which only you should ever know about.
 
@@ -78,29 +112,26 @@ Your username for the Koji Git repository is the same as the name you chose when
 
 In the Terminal window, type in your Username, then press the Enter key. When asked for the password, paste in the 32-character hex string that you copied from the Access Key overlay window. (Remember than in some Terminal windows, `Ctrl-C` means "Cancel", so you may have to use `Shift-Ctrl-C` to paste). The password that you pasted will not be shown. Press the Enter key to start the cloning process.
 
-<pre class="terminal"><span class="path">~/Repos/Koji$</span> git clone https://projects.koji-cdn.com/a70f8329-e89e-48b0-8d85-7658c1542b9f.git
-Cloning into 'a70f8329-e89e-48b0-8d85-7658c1542b9f'...
-**Username for 'https://projects.koji-cdn.com': <span class="custom">KojiCoder</span>
-Password for 'https://KojiCoder@projects.koji-cdn.com':** 
+```bash
+~/Repos/Koji$ git clone https://projects.koji-cdn.com/a70f8329-e89e-48b0-8d85-7658c1542b9f.git MyKojiGame
+Cloning into 'MyKojiGame'...
+Username for 'https://projects.koji-cdn.com': KojiCoder # Use your own username
+Password for 'https://KojiCoder@projects.koji-cdn.com': # Paste in your Access Key
 remote: Counting objects: 15941, done.
 remote: Compressing objects: 100% (6156/6156), done.
 remote: Total 15941 (delta 9517), reused 15941 (delta 9517)
 Receiving objects: 100% (15941/15941), 9.35 MiB | 754.00 KiB/s, done.
 Resolving deltas: 100% (9517/9517), done.
 Checking connectivity... done.
-</pre>
+```
 
 ## What You Get
 
-You should now have a new directory with a beautifully arcane name like `a70f8329-e89e-48b0-8d85-7658c1542b9f`. For the rest of this tutorial, I'm going to imagine that you renamed it to `MyKojiGame`:
+You should now have a new directory full of files that have been downloaded from the `origin` repository. Now you can `cd` into your `MyKojiGame` directory, and look at what has been cloned in:
 
-<pre class="terminal"><span class="path">~/Repos/Koji$</span> **mv <span class="custom">a70f8329-e89e-48b0-8d85-7658c1542b9f</span>/ MyKojiGame**
-</pre>
-
-Now you can `cd` into your `MyKojiGame` directory, and look at what has been cloned in:
-
-<pre class="terminal"><span class="path">~/Repos/Koji$</span> **cd MyKojiGame/**
-<span class="path">~/Repos/Koji$</span> **ls -al**
+```bash
+~/Repos/Koji$ cd MyKojiGame/
+~/Repos/Koji$ ls -al
 total 40
 drwxrwxr-x  6 kojicoder dev 4096 nov  5 16:38 .
 drwxrwxr-x 11 kojicoder dev 4096 nov  5 17:00 ..
@@ -112,4 +143,14 @@ drwxrwxr-x  8 kojicoder dev 4096 nov  5 16:38 .git
 drwxrwxr-x  6 kojicoder dev 4096 nov  5 16:38 .koji
 -rw-rw-r--  1 kojicoder dev   27 nov  5 16:38 package-lock.json
 -rw-rw-r--  1 kojicoder dev  797 nov  5 16:38 README.md
-</pre>
+```
+## The Story So Far
+
+In this section of the tutorial, you have seen how to:
+
+*   Find the required tools: Git, Node.js, a Terminal application and a text editor
+*   Find the URL of Koji's `origin` repository for your project
+*   Find the username and password that allows you to interact with Koji's `origin` repository
+*   Clone the Git repository for your project onto your local machine
+
+However, before you can launch your project locally, you will need to install a set of Node module dependencies. That is the topic of the next section in this tutorial: [Working Locally](working_locally.md).
