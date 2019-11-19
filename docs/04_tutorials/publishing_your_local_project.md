@@ -44,15 +44,7 @@ Making this change visible on Koji server is a four-step process.
 
 Each time you make a change to one of the files in your project, the Git version control system will note that the file has changed. You can use the command `git status` to discover which files have changed.
 
----
-
-**Note**
-
-At the root of your project, there is a file called `.gitignore`. (You might not see it because, by default, files whose names begin with a dot are hidden by your operating system.)
-
-The `.gitignore` file tells Git which files and folders to ignore. In particular, this file tells Git to ignore any changes made to files in the `node_modules` folders. These are the folders that were created when you ran `npm install` from within the `frontend/` and `backend/` folders. However, if you make a change to any file that is not an a `node_modules` folder, Git will be aware of your changes.
-
----
+**Note:** At the root of your project, there is a file called `.gitignore`. (You might not see it because, by default, files whose names begin with a dot are hidden by your operating system.) The `.gitignore` file tells Git which files and folders to ignore. In particular, this file tells Git to ignore any changes made to files in the `node_modules` folders. These are the folders that were created when you ran `npm install` from within the `frontend/` and `backend/` folders. However, if you make a change to any file that is not an a `node_modules` folder, Git will be aware of your changes.
 
 When you are ready to test your changes on the Koji server, open a Terminal window into the root directory of your project (`MyKojiGame/`, in my case) and run the following commands:
 
@@ -128,7 +120,7 @@ npm WARN meta-project@1.0.0 No license field.
 audited 12334 packages in 5.192s
 found 1 low severity vulnerability
   run `npm audit fix` to fix them, or `npm audit` for details
-root@ip-172-31-15-216:/usr/src/app/frontend# **npm start**
+root@ip-172-31-15-216:/usr/src/app/frontend# npm start
 ... (more output not shown) ...
 
 ℹ ｢wds｣: Compiled successfully
@@ -170,7 +162,7 @@ In the Online Editor:
 
 You will have to wait a few moments while your project is published, then you will be able to click on the Open Published App link near the top of the left-hand column, to test your game live.
 
-![Publishing an Unlisted project](working_locally/live.png "Publishing an Unlisted project")
+![Open your published game](working_locally/live.png "Open your published game")
 
 
 **Note:** By default, from now on, each time you publish your project, it will be published _unlisted_. When your project is ready for the world to see, don't forget to remove this setting.
@@ -216,7 +208,7 @@ As you develop your project, you will cycle through many such loops, adding and 
 In particular, you have seen how to:
 
 *   Clone a remixable Koji project onto your development computer ([Section 1](using_git_to_manage_your_project.md))
-*   Install a Node.js server environment and run your project locally ([Section 2](working_locally.md)
+*   Install a Node.js server environment and run your project locally ([Section 2](working_locally.md))
 *   Make and test changes locally
 *   Push your changes to the `origin` repository, and then pull them into the Online Editor
 *   Publish your changes to the Koji server
