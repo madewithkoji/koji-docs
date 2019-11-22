@@ -38,7 +38,7 @@ The Online Editor is divided into 4 sections:
 3.  A Preview pane on the right
 4.  A collapsible Terminal pane, with multiple tabs, at the bottom
 
-![The Koji Online Editor](working_locally/editor.png "The Koji Online Editor")
+![The Koji Online Editor](/docs/04_tutorials/working_locally/editor.png "The Koji Online Editor")
 
 **Note:** For more details about remixing a project in the Online Editor, please read the [Remixing Apps](../01_general/remixing.md) tutorial.
 
@@ -59,7 +59,7 @@ You will need to use the repository URL only once, you should know your Username
 
 To find the URL of the Koji repository, open your project page and in the bottom left corner of the page, click on the disclose triangle beside the Settings icon to see a link to your Repository settings. Click on that to open the Repository Settings pane.
 
-![Open the Repository Settings](working_locally/repository.png "Open the Repository Settings")
+![Open the Repository Settings](/docs/04_tutorials/working_locally/repository.png "Open the Repository Settings")
 
 The Repository Settings pane will show links to two repositories. The first is called Remote Repository, and this is the personal repository for your game.
 
@@ -93,15 +93,15 @@ To generate an Access Key, you need to visit the [Access key](https://withkoji.c
 
 When you are on your Settings page, press the [Access keys](https://withkoji.com/settings/access-keys) link in the column on the left.
 
-![Open the Access Keys settings](working_locally/AccessToAccess.png "Open the Access Keys settings")
+![Open the Access Keys settings](/docs/04_tutorials/working_locally/AccessToAccess.png "Open the Access Keys settings")
 
 On the Access Key page, click on the Generate New Token link at the top right.
 
-![Generate New Token](working_locally/GenerateToken.png "Generate a new token")
+![Generate New Token](/docs/04_tutorials/working_locally/GenerateToken.png "Generate a new token")
 
 An overlay window will open containing a 128-bit number in hexadecimal form. Copy this number and keep it somewhere safe, where only you can find it easily. You will need to use it each time you clone, pull or push to the `origin` repository.
 
-![Save your Access Key](working_locally/AccessKey.png "Save your Access Key")
+![Save your Access Key](/docs/04_tutorials/working_locally/AccessKey.png "Save your Access Key")
 
 After you close the overlay window, this number will be known only as `Token 1`, and you will have no way to retrieve it from the Koji site again. You can, however, revoke your token and generate a new one if you have forgotten it, or if you believe that someone unauthorized has discovered it.
 
