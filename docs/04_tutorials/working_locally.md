@@ -1,12 +1,12 @@
 # Working Locally
 
-Koji provides a feature-rich online project editor, but as a developer you are probably used to working with your own suite of development tools. In the [previous tutorial](using_git_to_manage_your_project.md), I described how to use Git to clone a Koji project template to your development machine, so that you can work on it locally to build your own game. If you haven't done so yet [go back](using_git_to_manage_your_project.md) and clone your project locally.
+Koji provides a feature-rich online project editor, but as a developer you are probably used to working with your own suite of development tools. In the [previous tutorial](https://withkoji.com/docs/tutorials/using-git-to-manage-your-project), I described how to use Git to clone a Koji project template to your development machine, so that you can work on it locally to build your own game. If you haven't done so yet [go back](https://withkoji.com/docs/tutorials/using-git-to-manage-your-project) and clone your project locally.
 
 This is the second section in a three-part tutorial:
 
-1. [Using Git to Manage Your Project](using_git_to_manage_your_project.md)
+1. [Using Git to Manage Your Project](https://withkoji.com/docs/tutorials/using-git-to-manage-your-project)
 2. Working Locally (this article)
-3. [Publishing the Project You Developed Locally](publishing_your_local_project.md)
+3. [Publishing the Project You Developed Locally](https://withkoji.com/docs/tutorials/publishing-your-local-project)
 
 In this section, you will be learning two key skills:
 
@@ -20,7 +20,7 @@ In this section, you will be setting up a Node.js server on your development com
 
 ## Installing the Dependencies
 
-In the [previous tutorial](using_git_to_manage_your_project.md), you used Git to clone all the project-specific files to your local drive. However, the files that actually run the a local server have not yet been installed. Fortunately, amongst the files that were cloned are four files that contain all the information about the servers and other dependencies that you will need to set up the server environment and launch the game locally. These are the `package.json` and `package-lock.json` files that you can find in the `frontend` and `backend` directories.
+In the [previous tutorial](https://withkoji.com/docs/tutorials/using-git-to-manage-your-project), you used Git to clone all the project-specific files to your local drive. However, the files that actually run the a local server have not yet been installed. Fortunately, amongst the files that were cloned are four files that contain all the information about the servers and other dependencies that you will need to set up the server environment and launch the game locally. These are the `package.json` and `package-lock.json` files that you can find in the `frontend` and `backend` directories.
 
 Before you can test the game on your development machine, you will need to install two sets of Node modules, one set to run the frontend and another set to run the backend.
 
@@ -206,4 +206,4 @@ In this section of the tutorial, you have seen how to:
 5. Launch the scaffold project
 6. Check that the game and the leaderboard are working correctly
 
-You are now ready to start editing this scaffold and your development machine and to turn this project into your own game. With what you have learned so far, you will be able to test all aspects of your game locally in your browser. But your future end-users will not be able to access your game from your development machine; they can only access it from the Koji server. In order to complete the development process, you will need to update the repository that the Koji server uses to deliver your game. That is the topic of the next section in this tutorial: [Publishing the Project You Developed Locally](publishing_your_local_project.md).
+You are now ready to start editing this scaffold and your development machine and to turn this project into your own game. With what you have learned so far, you will be able to test all aspects of your game locally in your browser. But your future end-users will not be able to access your game from your development machine; they can only access it from the Koji server. In order to complete the development process, you will need to update the repository that the Koji server uses to deliver your game. That is the topic of the next section in this tutorial: [Publishing the Project You Developed Locally](https://withkoji.com/docs/tutorials/publishing-your-local-project).
