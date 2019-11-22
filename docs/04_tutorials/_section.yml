@@ -10,3 +10,15 @@
     - name: Creating Your First Custom VCC
       slug: creating-your-first-custom-vcc
       path: creating_your_first_custom_vcc.md
+
+    - name: Using Git to Manage Your Project
+      slug: using-git-to-manage-your-project
+      path: using_git_to_manage_your_project.md
+
+    - name: Working Locally
+      slug: working-locally
+      path: working_locally.md
+
+    - name: Publishing Your Local Project
+      slug: publishing-your-local-project
+      path: publishing_your_local_project.md
