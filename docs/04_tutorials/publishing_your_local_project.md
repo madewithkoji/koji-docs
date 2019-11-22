@@ -158,11 +158,11 @@ In the Online Editor:
 4.  Make any other changes that you want in the General Information Zone
 5.  Click on Publish New Version.
 
-![Publishing an Unlisted project](working_locally/Publish.png "Publishing an Unlisted project")
+![Publishing an Unlisted project](/docs/04_tutorials/working_locally/Publish.png "Publishing an Unlisted project")
 
 You will have to wait a few moments while your project is published, then you will be able to click on the Open Published App link near the top of the left-hand column, to test your game live.
 
-![Open your published game](working_locally/live.png "Open your published game")
+![Open your published game](/docs/04_tutorials/working_locally/live.png "Open your published game")
 
 **Note:** By default, from now on, each time you publish your project, it will be published _unlisted_. When your project is ready for the world to see, don't forget to remove this setting.
 
