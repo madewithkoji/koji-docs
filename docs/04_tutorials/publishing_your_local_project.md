@@ -1,11 +1,11 @@
 # Publishing the Project You Developed Locally
 
-Koji provides a feature-rich online project editor, but as a developer you are probably used to working with your own suite of development tools. In the previous tutorials in this series, I described how to [use Git to clone a Koji project to your development machine]() and how to [install and launch a Node.js server](working_locally.md) to run your project locally.
+Koji provides a feature-rich online project editor, but as a developer you are probably used to working with your own suite of development tools. In the previous tutorials in this series, I described how to [use Git to clone a Koji project to your development machine]() and how to [install and launch a Node.js server](https://withkoji.com/docs/tutorials/working-locally) to run your project locally.
 
 This is the final section in a three-part tutorial:
 
-1. [Using Git to Manage Your Project](using_git_to_manage_your_project.md)
-2. [Working Locally](working_locally.md)
+1. [Using Git to Manage Your Project](https://withkoji.com/docs/tutorials/using-git-to-manage-your-project)
+2. [Working Locally](https://withkoji.com/docs/tutorials/working-locally)
 3. Publishing the Project You Developed Locally (this article)
 
 If you have followed the first two sections of this tutorial, you will now have a scaffold project running on your local computer, so you can use your own favourite text editor to modify it and add new features. You will also be able to test that these new features work on your development machine.
@@ -59,7 +59,7 @@ Note that you should replace `(your comments)` with a brief description of the c
 
 ### Pushing Changes to the Koji Repository
 
-After the `commit` process is successfully completed, you can use Git to upload the changes you have made to the repository stored on the Koji servers. To do this, you need to use the command `git push origin master`. You will be asked for your Koji username, and for your password. Your password is the Access Key that [you created earlier](https://github.com/blackslate/koji-docs/blob/master/docs/04_tutorials/using_git_to_manage_your_project.md#access-key) and stored somewhere safely.
+After the `commit` process is successfully completed, you can use Git to upload the changes you have made to the repository stored on the Koji servers. To do this, you need to use the command `git push origin master`. You will be asked for your Koji username, and for your password. Your password is the Access Key that [you created earlier](https://github.com/blackslate/koji-docs/blob/master/docs/04_tutorials/https://withkoji.com/docs/tutorials/using-git-to-manage-your-project#access-key) and stored somewhere safely.
 
 ```bash
 $ git push origin master # tells Git to upload your new version to the Koji repository
@@ -210,8 +210,8 @@ As you develop your project, you will cycle through many such loops, adding and 
 
 In particular, you have seen how to:
 
-*   Clone a remixable Koji project onto your development computer ([Section 1](using_git_to_manage_your_project.md))
-*   Install a Node.js server environment and run your project locally ([Section 2](working_locally.md))
+*   Clone a remixable Koji project onto your development computer ([Section 1](https://withkoji.com/docs/tutorials/using-git-to-manage-your-project))
+*   Install a Node.js server environment and run your project locally ([Section 2](https://withkoji.com/docs/tutorials/working-locally))
 *   Make and test changes locally
 *   Push your changes to the `origin` repository, and then pull them into the Online Editor
 *   Publish your changes to the Koji server
