@@ -4,8 +4,8 @@ Koji provides a feature-rich online project editor, but as a developer you are p
 
 This is the first section in a three-part tutorial. You can find the other two sections here:
 
-2. [Working Locally](working_locally.md)
-3. [Publishing the Project You Developed Locally](publishing_your_local_project.md)
+2. [Working Locally](https://withkoji.com/docs/tutorials/working-locally)
+3. [Publishing the Project You Developed Locally](https://withkoji.com/docs/tutorials/publishing-your-local-project)
 
 ## Required Tools
 
@@ -154,4 +154,4 @@ In this section of the tutorial, you have seen how to:
 3.   Find the username and password that allows you to interact with Koji's `origin` repository
 4.   Clone the Git repository for your project onto your local machine
 
-However, before you can launch your project locally, you will need to install a set of Node module dependencies. That is the topic of the next section in this tutorial: [Working Locally](working_locally.md).
+However, before you can launch your project locally, you will need to install a set of Node module dependencies. That is the topic of the next section in this tutorial: [Working Locally](https://withkoji.com/docs/tutorials/working-locally).
