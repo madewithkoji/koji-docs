@@ -1,6 +1,6 @@
 # Tutorial: Adding a Service to Your Project
 
-## AKA: How the Heck Does `serviceMap` Work?
+## AKA: How the Heck Does "serviceMap" Work?
 
 As you work through and extend templates on Koji, you will likely run into issues where your `Koji.config.serviceMap` doesn't look the way you think it should.
 
@@ -26,7 +26,7 @@ https://withkoji.com/~seane/simple-react-scaffold
 
 - Once your editor has loaded, rename this project, to something like "Adding a Backend Project"
 
-#### Watching for `serviceMap` changes
+#### Watching for "serviceMap" changes
 
 We will want to keep an eye on the value of `Koji.config.serviceMap`. Once we are able to see the `backend` service, we'll know that we've set up service properly.
 
@@ -328,4 +328,4 @@ If you're wondering about how these things just seem to magically "happen", here
 
 Hopefully this has given you a better understanding of how to add a service, and the service map configuration.
 
-Reach out to @diddy on Discord if you have questions or comments about this tutorial =)
+Reach out to @diddy on [Discord](https://discord.gg/eQuMJF6) if you have questions or comments about this tutorial =)
