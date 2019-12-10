@@ -3,6 +3,10 @@
   path: 04_tutorials
 
   sections:
+    - name: Porting Existing Code to Koji
+      slug: porting-existing-code
+      path: porting_existing_code.md
+
     - name: Adding a Service to Your Project
       slug: adding-a-service
       path: adding_a_service.md
