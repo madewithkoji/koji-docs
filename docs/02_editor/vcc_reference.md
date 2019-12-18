@@ -253,7 +253,7 @@ You can create fully custom VCCs by implementing `@withkoji/custom-vcc-sdk` into
 
 ## Quickstarts
 
-You can create a "quickstart" wizard, composed of multiple VCCs across multiple files, by adding a `quickstart.json` file to your `.koji` directory. This file defines zero or more controls that forward value changes to over VCCs in the project. You can use this to surface commonly-configured items and help users remixing your app to get up and running faster, especially if they are remixing on mobile devices.
+You can create a "quickstart" wizard, composed of multiple VCCs across multiple files, by adding a `quickstart.json` file to your `.koji/customization` directory. This file defines zero or more controls that forward value changes to over VCCs in the project. You can use this to surface commonly-configured items and help users remixing your app to get up and running faster, especially if they are remixing on mobile devices.
 
 For example, you could create a `quickstart.json` that exposed a text VCC for game title, a color VCC that affected both the foreground text color and the button background color, and an image VCC that affected two player images:
 
