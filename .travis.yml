@@ -15,8 +15,7 @@ script:
 deploy:
   provider: s3
   access_key_id: $ACCESSKEYID
-  secret_access_key:
-      secure: "$SECRETACCESSKEY"
+  secret_access_key: $SECRETACCESSKEY
   bucket: "com.withkoji.docs"
   region: "us-west-2"
   skip_cleanup: true
