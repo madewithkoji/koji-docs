@@ -223,7 +223,7 @@ Let's update the `develop.json` file first, which helps the Koji editor know whi
 
 You can see that we have added an additional entry, the `backend` entry. Let's see if it worked!
 
-- On the left of the editor, navigate to Advanced > Settings > Development and choose "Force Restart Project"
+- On the left of the editor, navigate to Advanced > Remote environment and choose "Force Restart Project (30 seconds)" under the Actions section
 
 If everything went well, you should be able to reconnect to the editor and now see a "Backend" terminal has been added to the terminals at the bottom of the screen!
 
