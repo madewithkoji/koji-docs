@@ -94,7 +94,7 @@ class App extends React.Component {
 First, we'll import the package we installed earlier. At the top of the `App.js` file, add the following:
 
 ```
-import CustomVcc from '@withkoji/custom-vcc-sdk';
+import CustomVCC from '@withkoji/custom-vcc-sdk';
 ```
 
 Now we will initialize the custom VCC and attach the instance to our app component. We'll also register the vcc, so that the "consumer" knows it's ready to use.
